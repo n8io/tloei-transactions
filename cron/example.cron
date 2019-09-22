@@ -1,0 +1,23 @@
+# Clear logs every Sunday at noon
+0 12 * 9-12 0 rm /root/tloei-transactions/logs/*.log
+
+# Every Sunday in Sep thru Dec, every 5 minutes from 1p to 11p
+*/5 13-23 * 9-12 0 /root/tloei-transactions/run.sh "" "sunday"
+
+# Every Monday in Sep thru Dec, every 5 minutes from 8p to 11p
+*/5 20-23 * 9-12 1 /root/tloei-transactions/run.sh "" "monday"
+
+# Every Tuesday in Sep thru Dec, at 4a
+0 4 * 9-12 2 /root/loei-stat-adjuster/run.sh "previous" "tuesday"
+
+# Every Thursday in Sep thru Dec, at 4a
+0 4 * 9-12 4 /root/tloei-transactions/run.sh "previous" "thursday"
+
+# Every Thursday in Sep thru Dec, every 5 minutes form 8p to 11p
+*/5 20-23 * 9-12 4 /root/tloei-transactions/run.sh "" "thursday"
+
+# Every Friday in Sep thru Dec, at 4a
+0 4 * 9-12 5 /root/tloei-transactions/run.sh "" "friday"
+
+# adhoc
+#4 7 * 9-12 3 /root/tloei-transactions/run.sh "" "adhoc"
