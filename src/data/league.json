@@ -134,20 +134,7 @@
       "keeperOrderType": "TRADITIONAL",
       "leagueSubType": "NONE",
       "orderType": "MANUAL",
-      "pickOrder": [
-        10,
-        2,
-        9,
-        8,
-        1,
-        6,
-        4,
-        7,
-        11,
-        5,
-        3,
-        12
-      ],
+      "pickOrder": [10, 2, 9, 8, 1, 6, 4, 7, 11, 5, 3, 12],
       "timePerSelection": 60,
       "type": "SNAKE"
     },
@@ -219,9 +206,7 @@
         "17": 0
       },
       "rosterLocktimeType": "INDIVIDUAL_GAME",
-      "universeIds": [
-        0
-      ]
+      "universeIds": [0]
     },
     "scheduleSettings": {
       "divisions": [
@@ -249,54 +234,22 @@
       "matchupPeriodCount": 13,
       "matchupPeriodLength": 1,
       "matchupPeriods": {
-        "1": [
-          1
-        ],
-        "2": [
-          2
-        ],
-        "3": [
-          3
-        ],
-        "4": [
-          4
-        ],
-        "5": [
-          5
-        ],
-        "6": [
-          6
-        ],
-        "7": [
-          7
-        ],
-        "8": [
-          8
-        ],
-        "9": [
-          9
-        ],
-        "10": [
-          10
-        ],
-        "11": [
-          11
-        ],
-        "12": [
-          12
-        ],
-        "13": [
-          13
-        ],
-        "14": [
-          14
-        ],
-        "15": [
-          15
-        ],
-        "16": [
-          16
-        ]
+        "1": [1],
+        "2": [2],
+        "3": [3],
+        "4": [4],
+        "5": [5],
+        "6": [6],
+        "7": [7],
+        "8": [8],
+        "9": [9],
+        "10": [10],
+        "11": [11],
+        "12": [12],
+        "13": [13],
+        "14": [14],
+        "15": [15],
+        "16": [16]
       },
       "periodTypeId": 1,
       "playoffMatchupPeriodLength": 1,
@@ -856,9 +809,7 @@
       "logo": "https://i.chzbgr.com/full/7979283456/h0A6E579A",
       "logoType": "CUSTOM_VALID",
       "nickname": "Place",
-      "owners": [
-        "{D6DF56BE-2E74-48EF-ADE8-381F3600E93D}"
-      ]
+      "owners": ["{D6DF56BE-2E74-48EF-ADE8-381F3600E93D}"]
     },
     {
       "abbrev": "JOTA",
@@ -867,9 +818,7 @@
       "logo": "http://1.bp.blogspot.com/-JCGhHIpTS_4/T56_Z71t4kI/AAAAAAAABGI/P60q4LoM_4A/s1600/lfl000.jpg",
       "logoType": "CUSTOM_VALID",
       "nickname": "HOs",
-      "owners": [
-        "{6ECDDAB9-F3DD-4C76-A91C-885CE99875C9}"
-      ]
+      "owners": ["{6ECDDAB9-F3DD-4C76-A91C-885CE99875C9}"]
     },
     {
       "abbrev": "HURL",
@@ -878,9 +827,7 @@
       "logo": "https://hurleybaseball.weebly.com/uploads/3/8/4/2/38426265/9562111_orig.jpg",
       "logoType": "CUSTOM_VALID",
       "nickname": "4.9",
-      "owners": [
-        "{57716A2F-7625-4522-9967-578FB0EFE187}"
-      ]
+      "owners": ["{57716A2F-7625-4522-9967-578FB0EFE187}"]
     },
     {
       "abbrev": "CJAY",
@@ -889,9 +836,7 @@
       "logo": "https://images.freshop.com/8099192/2e0a7436e64e49c89ad674642c16e1aa_medium.png",
       "logoType": "CUSTOM_VALID",
       "nickname": "H.A.M.",
-      "owners": [
-        "{4E064B61-CB28-4118-8B56-83CE04A52C6E}"
-      ]
+      "owners": ["{4E064B61-CB28-4118-8B56-83CE04A52C6E}"]
     },
     {
       "abbrev": "EBBY",
@@ -900,9 +845,7 @@
       "logo": "https://image.shutterstock.com/image-vector/lying-man-long-nose-260nw-185726279.jpg",
       "logoType": "CUSTOM_VALID",
       "nickname": "Cheeks",
-      "owners": [
-        "{F8840D5D-641A-4B16-A61A-D873FED4900C}"
-      ]
+      "owners": ["{F8840D5D-641A-4B16-A61A-D873FED4900C}"]
     },
     {
       "abbrev": "DUBS",
@@ -911,9 +854,7 @@
       "logo": "https://cdn.shopify.com/s/files/1/1873/2949/products/Peach_Eggplant_Enamel_Pin_Pack_1024x695.jpg?v=1503179235",
       "logoType": "CUSTOM_VALID",
       "nickname": "Dingles",
-      "owners": [
-        "{A00CC207-964C-4439-8908-0221AB6731FA}"
-      ]
+      "owners": ["{A00CC207-964C-4439-8908-0221AB6731FA}"]
     },
     {
       "abbrev": "KURT",
@@ -922,9 +863,7 @@
       "logo": "https://media.giphy.com/media/5UqSYBcop3fBl4XGbY/giphy.gif",
       "logoType": "CUSTOM",
       "nickname": "Brown",
-      "owners": [
-        "{0A5463DB-4FCA-44C7-814D-1C652AA99640}"
-      ]
+      "owners": ["{0A5463DB-4FCA-44C7-814D-1C652AA99640}"]
     },
     {
       "abbrev": "FRYE",
@@ -933,9 +872,7 @@
       "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/Xmas-AndrewJanik/XMas_16.svg",
       "logoType": "VECTOR",
       "nickname": "Guts",
-      "owners": [
-        "{B8D7B422-A04C-4080-B600-D384E100DE40}"
-      ]
+      "owners": ["{B8D7B422-A04C-4080-B600-D384E100DE40}"]
     },
     {
       "abbrev": "MBIX",
@@ -944,9 +881,7 @@
       "logo": "https://g.espncdn.com/lm-static/logo-packs/core/TeamMascots-RobbHarskamp/Team_Mascots-02.svg",
       "logoType": "VECTOR",
       "nickname": "Bixler",
-      "owners": [
-        "{4D67C9F2-3837-4FB7-9EC1-43CA44CCB7A3}"
-      ]
+      "owners": ["{4D67C9F2-3837-4FB7-9EC1-43CA44CCB7A3}"]
     },
     {
       "abbrev": "CLDL",
@@ -955,9 +890,7 @@
       "logo": "https://vindy.media.clients.ellingtoncms.com/img/news/tease/2018/11/11/AP18315730579614.jpg",
       "logoType": "CUSTOM_VALID",
       "nickname": "Chubbed",
-      "owners": [
-        "{0F73372C-7C25-43F6-A7D9-BBC4B52A2786}"
-      ]
+      "owners": ["{0F73372C-7C25-43F6-A7D9-BBC4B52A2786}"]
     },
     {
       "abbrev": "JROD",
@@ -966,9 +899,7 @@
       "logo": "https://s-media-cache-ak0.pinimg.com/236x/2a/c8/8e/2ac88e14328a20b427c4ab25c751a61a.jpg",
       "logoType": "CUSTOM_VALID",
       "nickname": "Muffin",
-      "owners": [
-        "{4CFDCAAF-94B7-4A37-9BBF-931014CE0FF7}"
-      ]
+      "owners": ["{4CFDCAAF-94B7-4A37-9BBF-931014CE0FF7}"]
     },
     {
       "abbrev": "WEAV",
@@ -977,9 +908,7 @@
       "logo": "http://www.baconsports.com/wp-content/uploads/2014/11/ODB-odell-good-2.jpg",
       "logoType": "CUSTOM_VALID",
       "nickname": "OBJr.",
-      "owners": [
-        "{320FFF7F-ED63-45E5-99D8-2926290DE8AD}"
-      ]
+      "owners": ["{320FFF7F-ED63-45E5-99D8-2926290DE8AD}"]
     }
   ]
 }
