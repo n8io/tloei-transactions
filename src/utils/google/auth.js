@@ -1,19 +1,20 @@
 import { log } from 'utils/log';
 import secrets from '../../../client_secret';
 
-const auth = doc =>
-  new Promise((resolve, reject) => {
-    log('🔐 Authenticating Google Sheets access...');
-    doc.useServiceAccountAuth(secrets, err => {
-      if (err) {
-        log('🔒 Failed access');
+const auth = async doc => {
+  log('🔐 Authenticating Google Sheets access...');
 
-        return reject(err);
-      }
+  try {
+    await doc.useServiceAccountAuth(secrets);
+    await doc.loadInfo();
+  } catch (err) {
+    log('🔒 Failed access', err);
 
-      log('🔓 Access granted');
-      return resolve();
-    });
-  });
+    throw err;
+  }
+
+  log('🔓 Access granted');
+  return doc;
+};
 
 export { auth };

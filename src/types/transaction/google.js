@@ -43,7 +43,7 @@ const makeTransactionCountsLogger = rows => async (transactionCount, index) => {
 const save = async transactionCounts => {
   const doc = await initialize();
   const sheet = await worksheet(doc, 'Summary');
-  const rows = await getRows(sheet);
+  const rows = await sheet.getRows();
   const sorted = sortBy(prop('abbrev'), transactionCounts);
   const logTransactionCount = makeTransactionCountsLogger(rows);
 
