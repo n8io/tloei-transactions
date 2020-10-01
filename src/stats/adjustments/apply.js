@@ -4,7 +4,7 @@ import { hydrate, Url } from 'types/url';
 import { log } from 'utils/log';
 import { post } from 'utils/post';
 
-const { APPLY_ADJUSTMENTS } = getConfig();
+const { APPLY_TRANSACTIONS } = getConfig();
 
 // eslint-disable-next-line max-statements
 const apply = async ({ matchups, seasonId, weekId }) => {
@@ -14,7 +14,7 @@ const apply = async ({ matchups, seasonId, weekId }) => {
     log(`🚫 No stat adjustments to apply.`);
 
     return;
-  } else if (!APPLY_ADJUSTMENTS) {
+  } else if (!APPLY_TRANSACTIONS) {
     log(
       `⚠️ **** DRY RUN Week ${weekId} stat adjustments were NOT applied *** ️️⚠️`
     );
