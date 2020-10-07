@@ -1,19 +1,5 @@
 import { addIndex, has, map, prop, sortBy } from 'ramda';
 import { initialize, workbookUrl, worksheet } from 'utils/google';
-import { log } from 'utils/log';
-
-const getRows = sheet =>
-  new Promise((resolve, reject) => {
-    sheet.getRows(1, (err, rows) => {
-      if (err) {
-        log('🛑 Failed to fetch rows');
-
-        return reject(err);
-      }
-
-      return resolve(rows);
-    });
-  });
 
 const makeColumnUpdater = row => (name, value) => {
   if (!has(name, row)) return;
@@ -29,11 +15,11 @@ const makeTransactionCountsLogger = rows => async (transactionCount, index) => {
   const row = rows[index];
   const update = makeColumnUpdater(row);
 
-  update('owner', team);
-  update('adds', counts.adds);
-  update('drops', counts.drops);
-  update('injuredreserves', counts.injuredReserves);
-  update('trades', counts.trades);
+  update('Owner', team);
+  update('Adds', counts.adds);
+  update('Drops', counts.drops);
+  update('IR', counts.injuredReserves);
+  update('Trades', counts.trades);
 
   await row.save();
 
