@@ -6,9 +6,8 @@
     "WAIVERS_CONTINUOUS",
     "WAIVERS_TRADITIONAL_FAAB"
   ],
-  "allowWaiverOrderResetting": true,
-  "color": "#39b54a",
-  "colorRGB": "57, 181, 74",
+  "color": "#0d830f",
+  "colorRGB": "13, 131, 15",
   "communicationFilterTypes": {
     "leagueChatFilter": "MSG_BOARD_GROUP",
     "lmNoteFilter": "NOTE",
@@ -1362,10 +1361,20 @@
           "displayOrder": 0,
           "display": true,
           "formatRequired": true
+        },
+        {
+          "id": 252,
+          "name": "TRANSACTION_LIKELY_TO_TRADE",
+          "abbrev": null,
+          "description": null,
+          "displayOrder": 0,
+          "display": true,
+          "formatRequired": true
         }
       ],
       "communicationTypes": {
         "draftStatusDraftComplete": 119,
+        "modifiedDivision": 106,
         "modifiedSchedule": 138,
         "resetSchedule": 139,
         "transactionFreeAgentAdd": 178,
@@ -1385,6 +1394,8 @@
         "transactionRoster": 188,
         "transactionDraft": 189,
         "transactionDraftTrade": 190,
+        "transactionFailedTradeRosterLock": 194,
+        "transactionFailedIneligibleSlot": 199,
         "transactionFailedWaiverClaim": 202,
         "transactionTradeAcceptTrade": 224,
         "transactionDraftTradeAccept": 226,
@@ -1402,7 +1413,11 @@
         "transactionLMTradeVetoTrade": 241,
         "transactionLMTradeVetoDrop": 242,
         "transactionLMTradeVetoDraftTrade": 243,
-        "transactionLMMatchupAdjustmentChange": 247
+        "transactionLMMatchupAdjustmentChange": 247,
+        "transactionLikelyToTrade": 252,
+        "transactionLMSetToAuto": 256,
+        "transactionLMRemoveFromAuto": 257,
+        "bonusWinsAndLosses": 258
       }
     },
     "communicationFilterTypes": {
@@ -1417,142 +1432,13 @@
       "scheduleFilter": "ACTIVITY_SCHEDULE"
     },
     "deadlineSettings": {
-      "keeperEndDate": 1577692800000,
-      "keeperFutureEndDate": 1609315200000,
-      "keeperFutureStartDate": 1580976000000,
-      "keeperStartDate": 1549440000000,
-      "tradeEndDate": 1577692800000,
-      "tradeStartDate": 1549440000000
+      "keeperEndDate": 1673251200000,
+      "keeperFutureEndDate": 1704787200000,
+      "keeperFutureStartDate": 1679986800000,
+      "keeperStartDate": 1648450800000,
+      "tradeEndDate": 1673251200000,
+      "tradeStartDate": 1648450800000
     },
-    "defaultLeagueFormat": 3,
-    "defaultLeaguePrivacyIsPublic": true,
-    "defaultLeagueSize": 10,
-    "draftScheduleSettings": {
-      "availableTimes": {
-        "0": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "1": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "2": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "3": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "4": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "5": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "12": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "13": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "14": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "15": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "16": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "17": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "18": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "19": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "20": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "21": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "22": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        },
-        "23": {
-          "0": 1,
-          "15": 1,
-          "30": 1,
-          "45": 1
-        }
-      },
-      "endDate": 1572332400000,
-      "startDate": 1549440000000
-    },
-    "leagueFormats": [
-      {
-        "displayOrder": 1,
-        "name": "PPR_Scoring",
-        "id": 3
-      },
-      {
-        "displayOrder": 2,
-        "name": "Standard_Scoring",
-        "id": 1
-      }
-    ],
     "lineupSlots": [
       {
         "abbrev": "QB",
@@ -1561,9 +1447,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 1,
-        "eligiblePositions": [
-          1
-        ],
+        "eligiblePositions": [1],
         "id": 0,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1578,9 +1462,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 2,
-        "eligiblePositions": [
-          15
-        ],
+        "eligiblePositions": [15],
         "id": 1,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1595,9 +1477,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 3,
-        "eligiblePositions": [
-          2
-        ],
+        "eligiblePositions": [2],
         "id": 2,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1612,10 +1492,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 4,
-        "eligiblePositions": [
-          2,
-          3
-        ],
+        "eligiblePositions": [2, 3],
         "id": 3,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1630,9 +1507,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 5,
-        "eligiblePositions": [
-          3
-        ],
+        "eligiblePositions": [3],
         "id": 4,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1647,10 +1522,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 6,
-        "eligiblePositions": [
-          3,
-          4
-        ],
+        "eligiblePositions": [3, 4],
         "id": 5,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1665,9 +1537,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 7,
-        "eligiblePositions": [
-          4
-        ],
+        "eligiblePositions": [4],
         "id": 6,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1682,12 +1552,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 9,
-        "eligiblePositions": [
-          1,
-          2,
-          3,
-          4
-        ],
+        "eligiblePositions": [1, 2, 3, 4],
         "id": 7,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1702,9 +1567,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 10,
-        "eligiblePositions": [
-          9
-        ],
+        "eligiblePositions": [9],
         "id": 8,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1719,9 +1582,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 11,
-        "eligiblePositions": [
-          10
-        ],
+        "eligiblePositions": [10],
         "id": 9,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1736,9 +1597,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 12,
-        "eligiblePositions": [
-          11
-        ],
+        "eligiblePositions": [11],
         "id": 10,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1753,10 +1612,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 14,
-        "eligiblePositions": [
-          9,
-          10
-        ],
+        "eligiblePositions": [9, 10],
         "id": 11,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1771,9 +1627,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 15,
-        "eligiblePositions": [
-          12
-        ],
+        "eligiblePositions": [12],
         "id": 12,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1788,9 +1642,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 16,
-        "eligiblePositions": [
-          13
-        ],
+        "eligiblePositions": [13],
         "id": 13,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1805,10 +1657,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 17,
-        "eligiblePositions": [
-          12,
-          13
-        ],
+        "eligiblePositions": [12, 13],
         "id": 14,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1823,13 +1672,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 18,
-        "eligiblePositions": [
-          9,
-          10,
-          11,
-          12,
-          13
-        ],
+        "eligiblePositions": [9, 10, 11, 12, 13],
         "id": 15,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1844,9 +1687,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 19,
-        "eligiblePositions": [
-          16
-        ],
+        "eligiblePositions": [16],
         "id": 16,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1861,9 +1702,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 20,
-        "eligiblePositions": [
-          5
-        ],
+        "eligiblePositions": [5],
         "id": 17,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1878,9 +1717,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 21,
-        "eligiblePositions": [
-          7
-        ],
+        "eligiblePositions": [7],
         "id": 18,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1895,9 +1732,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 22,
-        "eligiblePositions": [
-          14
-        ],
+        "eligiblePositions": [14],
         "id": 19,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -1989,11 +1824,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 8,
-        "eligiblePositions": [
-          2,
-          3,
-          4
-        ],
+        "eligiblePositions": [2, 3, 4],
         "id": 23,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2006,11 +1837,9 @@
         "active": true,
         "bench": false,
         "canApplyLimitIndividually": false,
-        "display": true,
+        "display": false,
         "displayOrder": 13,
-        "eligiblePositions": [
-          17
-        ],
+        "eligiblePositions": [17],
         "id": 24,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2058,9 +1887,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 1,
-        "eligiblePositions": [
-          1
-        ],
+        "eligiblePositions": [1],
         "id": 0,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2075,9 +1902,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 2,
-        "eligiblePositions": [
-          15
-        ],
+        "eligiblePositions": [15],
         "id": 1,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2092,9 +1917,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 3,
-        "eligiblePositions": [
-          2
-        ],
+        "eligiblePositions": [2],
         "id": 2,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2109,10 +1932,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 4,
-        "eligiblePositions": [
-          2,
-          3
-        ],
+        "eligiblePositions": [2, 3],
         "id": 3,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2127,9 +1947,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 5,
-        "eligiblePositions": [
-          3
-        ],
+        "eligiblePositions": [3],
         "id": 4,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2144,10 +1962,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 6,
-        "eligiblePositions": [
-          3,
-          4
-        ],
+        "eligiblePositions": [3, 4],
         "id": 5,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2162,9 +1977,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 7,
-        "eligiblePositions": [
-          4
-        ],
+        "eligiblePositions": [4],
         "id": 6,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2179,12 +1992,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 9,
-        "eligiblePositions": [
-          1,
-          2,
-          3,
-          4
-        ],
+        "eligiblePositions": [1, 2, 3, 4],
         "id": 7,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2199,9 +2007,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 10,
-        "eligiblePositions": [
-          9
-        ],
+        "eligiblePositions": [9],
         "id": 8,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2216,9 +2022,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 11,
-        "eligiblePositions": [
-          10
-        ],
+        "eligiblePositions": [10],
         "id": 9,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2233,9 +2037,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 12,
-        "eligiblePositions": [
-          11
-        ],
+        "eligiblePositions": [11],
         "id": 10,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2250,10 +2052,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 14,
-        "eligiblePositions": [
-          9,
-          10
-        ],
+        "eligiblePositions": [9, 10],
         "id": 11,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2268,9 +2067,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 15,
-        "eligiblePositions": [
-          12
-        ],
+        "eligiblePositions": [12],
         "id": 12,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2285,9 +2082,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 16,
-        "eligiblePositions": [
-          13
-        ],
+        "eligiblePositions": [13],
         "id": 13,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2302,10 +2097,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 17,
-        "eligiblePositions": [
-          12,
-          13
-        ],
+        "eligiblePositions": [12, 13],
         "id": 14,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2320,13 +2112,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 18,
-        "eligiblePositions": [
-          9,
-          10,
-          11,
-          12,
-          13
-        ],
+        "eligiblePositions": [9, 10, 11, 12, 13],
         "id": 15,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2341,9 +2127,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 19,
-        "eligiblePositions": [
-          16
-        ],
+        "eligiblePositions": [16],
         "id": 16,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2358,9 +2142,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 20,
-        "eligiblePositions": [
-          5
-        ],
+        "eligiblePositions": [5],
         "id": 17,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2375,9 +2157,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 21,
-        "eligiblePositions": [
-          7
-        ],
+        "eligiblePositions": [7],
         "id": 18,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2392,9 +2172,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 22,
-        "eligiblePositions": [
-          14
-        ],
+        "eligiblePositions": [14],
         "id": 19,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2486,11 +2264,7 @@
         "canApplyLimitIndividually": false,
         "display": true,
         "displayOrder": 8,
-        "eligiblePositions": [
-          2,
-          3,
-          4
-        ],
+        "eligiblePositions": [2, 3, 4],
         "id": 23,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2503,11 +2277,9 @@
         "active": true,
         "bench": false,
         "canApplyLimitIndividually": false,
-        "display": true,
+        "display": false,
         "displayOrder": 13,
-        "eligiblePositions": [
-          17
-        ],
+        "eligiblePositions": [17],
         "id": 24,
         "injuryRequired": false,
         "lineupSlotEligible": true,
@@ -2576,23 +2348,7 @@
             23,
             24
           ],
-          "positions": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            7,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17
-          ],
+          "positions": [1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17],
           "name": "All Players"
         }
       ],
@@ -2601,6 +2357,27 @@
     },
     "playerRankSources": {
       "sources": [
+        {
+          "abbrev": "EM",
+          "active": true,
+          "activeRankTypes": ["PPR", "STANDARD"],
+          "average": false,
+          "display": true,
+          "displayOrder": 7,
+          "id": 11,
+          "name": "Eric Moody"
+        },
+        {
+          "abbrev": "LL",
+          "active": true,
+          "activeRankTypes": ["PPR"],
+          "average": false,
+          "description": "LL",
+          "display": true,
+          "displayOrder": 6,
+          "id": 12,
+          "name": "Liz Loza"
+        },
         {
           "active": true,
           "average": true,
@@ -2619,26 +2396,22 @@
         },
         {
           "abbrev": "TMB",
-          "active": true,
-          "activeRankTypes": [
-            "PPR"
-          ],
+          "active": false,
+          "activeRankTypes": ["PPR"],
           "average": false,
+          "description": "TMB",
           "display": true,
-          "displayOrder": 1,
+          "displayOrder": 998,
           "id": 2,
           "name": "Matthew Berry"
         },
         {
           "abbrev": "EK",
           "active": true,
-          "activeRankTypes": [
-            "STANDARD",
-            "PPR"
-          ],
+          "activeRankTypes": ["PPR", "STANDARD"],
           "average": false,
           "display": true,
-          "displayOrder": 2,
+          "displayOrder": 5,
           "id": 3,
           "name": "Eric Karabell"
         },
@@ -2654,64 +2427,65 @@
         {
           "abbrev": "TC",
           "active": true,
-          "activeRankTypes": [
-            "STANDARD",
-            "PPR"
-          ],
+          "activeRankTypes": ["PPR", "STANDARD"],
           "average": false,
           "display": true,
-          "displayOrder": 4,
+          "displayOrder": 3,
           "id": 5,
           "name": "Tristan H. Cockcroft"
         },
         {
           "abbrev": "FY",
           "active": true,
-          "activeRankTypes": [
-            "PPR"
-          ],
+          "activeRankTypes": ["PPR"],
           "average": false,
           "display": true,
-          "displayOrder": 3,
+          "displayOrder": 8,
           "id": 6,
           "name": "Field Yates"
         },
         {
           "abbrev": "MC",
           "active": true,
-          "activeRankTypes": [
-            "STANDARD",
-            "PPR"
-          ],
+          "activeRankTypes": ["PPR", "STANDARD"],
           "average": false,
+          "description": "MC",
           "display": true,
-          "displayOrder": 5,
+          "displayOrder": 2,
           "id": 7,
           "name": "Mike Clay"
         },
         {
           "abbrev": "SB",
-          "active": true,
-          "activeRankTypes": [
-            "PPR"
-          ],
+          "active": false,
+          "activeRankTypes": [],
           "average": false,
           "display": true,
-          "displayOrder": 6,
+          "displayOrder": 997,
           "id": 8,
           "name": "Stephania Bell"
         },
         {
           "abbrev": "MB",
           "active": true,
-          "activeRankTypes": [
-            "STANDARD"
-          ],
+          "activeRankTypes": ["PPR"],
           "average": false,
+          "description": "MB",
           "display": true,
-          "displayOrder": 7,
+          "displayOrder": 1,
           "id": 9,
           "name": "Matt Bowen"
+        },
+        {
+          "abbrev": "DOPP",
+          "active": true,
+          "activeRankTypes": ["PPR"],
+          "average": false,
+          "description": "DOPP",
+          "display": true,
+          "displayOrder": 4,
+          "id": 10,
+          "name": "Daniel Dopp"
         }
       ],
       "playerRankSlotCounts": {
@@ -2719,8 +2493,12 @@
         "2": 50,
         "4": 50,
         "6": 25,
-        "16": 25,
-        "17": 25,
+        "7": 20,
+        "10": 50,
+        "11": 50,
+        "14": 50,
+        "16": 20,
+        "17": 20,
         "23": 75
       }
     },
@@ -2898,7 +2676,7 @@
       {
         "abbrev": "EDR",
         "active": true,
-        "display": true,
+        "display": false,
         "displayOrder": 17,
         "id": 17,
         "name": "Edge Rusher",
@@ -2917,7 +2695,7 @@
       },
       {
         "abbrev": "Atl",
-        "byeWeek": 9,
+        "byeWeek": 14,
         "id": 1,
         "location": "Atlanta",
         "name": "Falcons",
@@ -2925,7 +2703,7 @@
       },
       {
         "abbrev": "Buf",
-        "byeWeek": 6,
+        "byeWeek": 7,
         "id": 2,
         "location": "Buffalo",
         "name": "Bills",
@@ -2933,7 +2711,7 @@
       },
       {
         "abbrev": "Chi",
-        "byeWeek": 6,
+        "byeWeek": 14,
         "id": 3,
         "location": "Chicago",
         "name": "Bears",
@@ -2941,7 +2719,7 @@
       },
       {
         "abbrev": "Cin",
-        "byeWeek": 9,
+        "byeWeek": 10,
         "id": 4,
         "location": "Cincinnati",
         "name": "Bengals",
@@ -2949,7 +2727,7 @@
       },
       {
         "abbrev": "Cle",
-        "byeWeek": 7,
+        "byeWeek": 9,
         "id": 5,
         "location": "Cleveland",
         "name": "Browns",
@@ -2957,7 +2735,7 @@
       },
       {
         "abbrev": "Dal",
-        "byeWeek": 8,
+        "byeWeek": 9,
         "id": 6,
         "location": "Dallas",
         "name": "Cowboys",
@@ -2965,7 +2743,7 @@
       },
       {
         "abbrev": "Den",
-        "byeWeek": 10,
+        "byeWeek": 9,
         "id": 7,
         "location": "Denver",
         "name": "Broncos",
@@ -2973,7 +2751,7 @@
       },
       {
         "abbrev": "Det",
-        "byeWeek": 5,
+        "byeWeek": 6,
         "id": 8,
         "location": "Detroit",
         "name": "Lions",
@@ -2981,7 +2759,7 @@
       },
       {
         "abbrev": "GB",
-        "byeWeek": 11,
+        "byeWeek": 14,
         "id": 9,
         "location": "Green Bay",
         "name": "Packers",
@@ -2989,7 +2767,7 @@
       },
       {
         "abbrev": "Ten",
-        "byeWeek": 11,
+        "byeWeek": 6,
         "id": 10,
         "location": "Tennessee",
         "name": "Titans",
@@ -2997,7 +2775,7 @@
       },
       {
         "abbrev": "Ind",
-        "byeWeek": 6,
+        "byeWeek": 14,
         "id": 11,
         "location": "Indianapolis",
         "name": "Colts",
@@ -3005,23 +2783,23 @@
       },
       {
         "abbrev": "KC",
-        "byeWeek": 12,
+        "byeWeek": 8,
         "id": 12,
         "location": "Kansas City",
         "name": "Chiefs",
         "universeId": 1
       },
       {
-        "abbrev": "Oak",
+        "abbrev": "LV",
         "byeWeek": 6,
         "id": 13,
-        "location": "Oakland",
+        "location": "Las Vegas",
         "name": "Raiders",
         "universeId": 1
       },
       {
         "abbrev": "LAR",
-        "byeWeek": 9,
+        "byeWeek": 7,
         "id": 14,
         "location": "Los Angeles",
         "name": "Rams",
@@ -3029,7 +2807,7 @@
       },
       {
         "abbrev": "Mia",
-        "byeWeek": 5,
+        "byeWeek": 11,
         "id": 15,
         "location": "Miami",
         "name": "Dolphins",
@@ -3037,7 +2815,7 @@
       },
       {
         "abbrev": "Min",
-        "byeWeek": 12,
+        "byeWeek": 7,
         "id": 16,
         "location": "Minnesota",
         "name": "Vikings",
@@ -3053,7 +2831,7 @@
       },
       {
         "abbrev": "NO",
-        "byeWeek": 9,
+        "byeWeek": 14,
         "id": 18,
         "location": "New Orleans",
         "name": "Saints",
@@ -3061,7 +2839,7 @@
       },
       {
         "abbrev": "NYG",
-        "byeWeek": 11,
+        "byeWeek": 9,
         "id": 19,
         "location": "New York",
         "name": "Giants",
@@ -3069,7 +2847,7 @@
       },
       {
         "abbrev": "NYJ",
-        "byeWeek": 4,
+        "byeWeek": 10,
         "id": 20,
         "location": "New York",
         "name": "Jets",
@@ -3077,7 +2855,7 @@
       },
       {
         "abbrev": "Phi",
-        "byeWeek": 10,
+        "byeWeek": 7,
         "id": 21,
         "location": "Philadelphia",
         "name": "Eagles",
@@ -3085,7 +2863,7 @@
       },
       {
         "abbrev": "Ari",
-        "byeWeek": 12,
+        "byeWeek": 13,
         "id": 22,
         "location": "Arizona",
         "name": "Cardinals",
@@ -3093,7 +2871,7 @@
       },
       {
         "abbrev": "Pit",
-        "byeWeek": 7,
+        "byeWeek": 9,
         "id": 23,
         "location": "Pittsburgh",
         "name": "Steelers",
@@ -3101,7 +2879,7 @@
       },
       {
         "abbrev": "LAC",
-        "byeWeek": 12,
+        "byeWeek": 8,
         "id": 24,
         "location": "Los Angeles",
         "name": "Chargers",
@@ -3109,7 +2887,7 @@
       },
       {
         "abbrev": "SF",
-        "byeWeek": 4,
+        "byeWeek": 9,
         "id": 25,
         "location": "San Francisco",
         "name": "49ers",
@@ -3125,7 +2903,7 @@
       },
       {
         "abbrev": "TB",
-        "byeWeek": 7,
+        "byeWeek": 11,
         "id": 27,
         "location": "Tampa Bay",
         "name": "Buccaneers",
@@ -3133,15 +2911,15 @@
       },
       {
         "abbrev": "Wsh",
-        "byeWeek": 10,
+        "byeWeek": 14,
         "id": 28,
         "location": "Washington",
-        "name": "Redskins",
+        "name": "Commanders",
         "universeId": 2
       },
       {
         "abbrev": "Car",
-        "byeWeek": 7,
+        "byeWeek": 13,
         "id": 29,
         "location": "Carolina",
         "name": "Panthers",
@@ -3149,7 +2927,7 @@
       },
       {
         "abbrev": "Jax",
-        "byeWeek": 10,
+        "byeWeek": 11,
         "id": 30,
         "location": "Jacksonville",
         "name": "Jaguars",
@@ -3157,7 +2935,7 @@
       },
       {
         "abbrev": "Bal",
-        "byeWeek": 8,
+        "byeWeek": 10,
         "id": 33,
         "location": "Baltimore",
         "name": "Ravens",
@@ -3165,7 +2943,7 @@
       },
       {
         "abbrev": "Hou",
-        "byeWeek": 10,
+        "byeWeek": 6,
         "id": 34,
         "location": "Houston",
         "name": "Texans",
@@ -3183,7 +2961,7 @@
       },
       "1": {
         "abbrev": "Atl",
-        "byeWeek": 9,
+        "byeWeek": 14,
         "id": 1,
         "location": "Atlanta",
         "name": "Falcons",
@@ -3191,7 +2969,7 @@
       },
       "2": {
         "abbrev": "Buf",
-        "byeWeek": 6,
+        "byeWeek": 7,
         "id": 2,
         "location": "Buffalo",
         "name": "Bills",
@@ -3199,7 +2977,7 @@
       },
       "3": {
         "abbrev": "Chi",
-        "byeWeek": 6,
+        "byeWeek": 14,
         "id": 3,
         "location": "Chicago",
         "name": "Bears",
@@ -3207,7 +2985,7 @@
       },
       "4": {
         "abbrev": "Cin",
-        "byeWeek": 9,
+        "byeWeek": 10,
         "id": 4,
         "location": "Cincinnati",
         "name": "Bengals",
@@ -3215,7 +2993,7 @@
       },
       "5": {
         "abbrev": "Cle",
-        "byeWeek": 7,
+        "byeWeek": 9,
         "id": 5,
         "location": "Cleveland",
         "name": "Browns",
@@ -3223,7 +3001,7 @@
       },
       "6": {
         "abbrev": "Dal",
-        "byeWeek": 8,
+        "byeWeek": 9,
         "id": 6,
         "location": "Dallas",
         "name": "Cowboys",
@@ -3231,7 +3009,7 @@
       },
       "7": {
         "abbrev": "Den",
-        "byeWeek": 10,
+        "byeWeek": 9,
         "id": 7,
         "location": "Denver",
         "name": "Broncos",
@@ -3239,7 +3017,7 @@
       },
       "8": {
         "abbrev": "Det",
-        "byeWeek": 5,
+        "byeWeek": 6,
         "id": 8,
         "location": "Detroit",
         "name": "Lions",
@@ -3247,7 +3025,7 @@
       },
       "9": {
         "abbrev": "GB",
-        "byeWeek": 11,
+        "byeWeek": 14,
         "id": 9,
         "location": "Green Bay",
         "name": "Packers",
@@ -3255,7 +3033,7 @@
       },
       "10": {
         "abbrev": "Ten",
-        "byeWeek": 11,
+        "byeWeek": 6,
         "id": 10,
         "location": "Tennessee",
         "name": "Titans",
@@ -3263,7 +3041,7 @@
       },
       "11": {
         "abbrev": "Ind",
-        "byeWeek": 6,
+        "byeWeek": 14,
         "id": 11,
         "location": "Indianapolis",
         "name": "Colts",
@@ -3271,23 +3049,23 @@
       },
       "12": {
         "abbrev": "KC",
-        "byeWeek": 12,
+        "byeWeek": 8,
         "id": 12,
         "location": "Kansas City",
         "name": "Chiefs",
         "universeId": 1
       },
       "13": {
-        "abbrev": "Oak",
+        "abbrev": "LV",
         "byeWeek": 6,
         "id": 13,
-        "location": "Oakland",
+        "location": "Las Vegas",
         "name": "Raiders",
         "universeId": 1
       },
       "14": {
         "abbrev": "LAR",
-        "byeWeek": 9,
+        "byeWeek": 7,
         "id": 14,
         "location": "Los Angeles",
         "name": "Rams",
@@ -3295,7 +3073,7 @@
       },
       "15": {
         "abbrev": "Mia",
-        "byeWeek": 5,
+        "byeWeek": 11,
         "id": 15,
         "location": "Miami",
         "name": "Dolphins",
@@ -3303,7 +3081,7 @@
       },
       "16": {
         "abbrev": "Min",
-        "byeWeek": 12,
+        "byeWeek": 7,
         "id": 16,
         "location": "Minnesota",
         "name": "Vikings",
@@ -3319,7 +3097,7 @@
       },
       "18": {
         "abbrev": "NO",
-        "byeWeek": 9,
+        "byeWeek": 14,
         "id": 18,
         "location": "New Orleans",
         "name": "Saints",
@@ -3327,7 +3105,7 @@
       },
       "19": {
         "abbrev": "NYG",
-        "byeWeek": 11,
+        "byeWeek": 9,
         "id": 19,
         "location": "New York",
         "name": "Giants",
@@ -3335,7 +3113,7 @@
       },
       "20": {
         "abbrev": "NYJ",
-        "byeWeek": 4,
+        "byeWeek": 10,
         "id": 20,
         "location": "New York",
         "name": "Jets",
@@ -3343,7 +3121,7 @@
       },
       "21": {
         "abbrev": "Phi",
-        "byeWeek": 10,
+        "byeWeek": 7,
         "id": 21,
         "location": "Philadelphia",
         "name": "Eagles",
@@ -3351,7 +3129,7 @@
       },
       "22": {
         "abbrev": "Ari",
-        "byeWeek": 12,
+        "byeWeek": 13,
         "id": 22,
         "location": "Arizona",
         "name": "Cardinals",
@@ -3359,7 +3137,7 @@
       },
       "23": {
         "abbrev": "Pit",
-        "byeWeek": 7,
+        "byeWeek": 9,
         "id": 23,
         "location": "Pittsburgh",
         "name": "Steelers",
@@ -3367,7 +3145,7 @@
       },
       "24": {
         "abbrev": "LAC",
-        "byeWeek": 12,
+        "byeWeek": 8,
         "id": 24,
         "location": "Los Angeles",
         "name": "Chargers",
@@ -3375,7 +3153,7 @@
       },
       "25": {
         "abbrev": "SF",
-        "byeWeek": 4,
+        "byeWeek": 9,
         "id": 25,
         "location": "San Francisco",
         "name": "49ers",
@@ -3391,7 +3169,7 @@
       },
       "27": {
         "abbrev": "TB",
-        "byeWeek": 7,
+        "byeWeek": 11,
         "id": 27,
         "location": "Tampa Bay",
         "name": "Buccaneers",
@@ -3399,15 +3177,15 @@
       },
       "28": {
         "abbrev": "Wsh",
-        "byeWeek": 10,
+        "byeWeek": 14,
         "id": 28,
         "location": "Washington",
-        "name": "Redskins",
+        "name": "Commanders",
         "universeId": 2
       },
       "29": {
         "abbrev": "Car",
-        "byeWeek": 7,
+        "byeWeek": 13,
         "id": 29,
         "location": "Carolina",
         "name": "Panthers",
@@ -3415,7 +3193,7 @@
       },
       "30": {
         "abbrev": "Jax",
-        "byeWeek": 10,
+        "byeWeek": 11,
         "id": 30,
         "location": "Jacksonville",
         "name": "Jaguars",
@@ -3423,7 +3201,7 @@
       },
       "33": {
         "abbrev": "Bal",
-        "byeWeek": 8,
+        "byeWeek": 10,
         "id": 33,
         "location": "Baltimore",
         "name": "Ravens",
@@ -3431,7 +3209,7 @@
       },
       "34": {
         "abbrev": "Hou",
-        "byeWeek": 10,
+        "byeWeek": 6,
         "id": 34,
         "location": "Houston",
         "name": "Texans",
@@ -3477,130 +3255,137 @@
         "startDate": 0
       },
       {
-        "endDate": 1568098800000,
+        "endDate": 1663052400000,
         "id": 1,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1549440000000
+        "startDate": 1648450800000
       },
       {
-        "endDate": 1568703600000,
+        "endDate": 1663657200000,
         "id": 2,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1568098800000
+        "startDate": 1663052400000
       },
       {
-        "endDate": 1569308400000,
+        "endDate": 1664262000000,
         "id": 3,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1568703600000
+        "startDate": 1663657200000
       },
       {
-        "endDate": 1569913200000,
+        "endDate": 1664866800000,
         "id": 4,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1569308400000
+        "startDate": 1664262000000
       },
       {
-        "endDate": 1570518000000,
+        "endDate": 1665471600000,
         "id": 5,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1569913200000
+        "startDate": 1664866800000
       },
       {
-        "endDate": 1571122800000,
+        "endDate": 1666076400000,
         "id": 6,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1570518000000
+        "startDate": 1665471600000
       },
       {
-        "endDate": 1571727600000,
+        "endDate": 1666681200000,
         "id": 7,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1571122800000
+        "startDate": 1666076400000
       },
       {
-        "endDate": 1572332400000,
+        "endDate": 1667286000000,
         "id": 8,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1571727600000
+        "startDate": 1666681200000
       },
       {
-        "endDate": 1572940800000,
+        "endDate": 1667894400000,
         "id": 9,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1572332400000
+        "startDate": 1667286000000
       },
       {
-        "endDate": 1573545600000,
+        "endDate": 1668499200000,
         "id": 10,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1572940800000
+        "startDate": 1667894400000
       },
       {
-        "endDate": 1574150400000,
+        "endDate": 1669104000000,
         "id": 11,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1573545600000
+        "startDate": 1668499200000
       },
       {
-        "endDate": 1574755200000,
+        "endDate": 1669708800000,
         "id": 12,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1574150400000
+        "startDate": 1669104000000
       },
       {
-        "endDate": 1575360000000,
+        "endDate": 1670313600000,
         "id": 13,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1574755200000
+        "startDate": 1669708800000
       },
       {
-        "endDate": 1575964800000,
+        "endDate": 1670918400000,
         "id": 14,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1575360000000
+        "startDate": 1670313600000
       },
       {
-        "endDate": 1576569600000,
+        "endDate": 1671523200000,
         "id": 15,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1575964800000
+        "startDate": 1670918400000
       },
       {
-        "endDate": 1577174400000,
+        "endDate": 1672128000000,
         "id": 16,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1576569600000
+        "startDate": 1671523200000
       },
       {
-        "endDate": 1577692800000,
+        "endDate": 1672732800000,
         "id": 17,
         "postSeason": false,
         "preSeason": false,
-        "startDate": 1577174400000
+        "startDate": 1672128000000
       },
       {
-        "endDate": 1612598400000,
+        "endDate": 1673251200000,
         "id": 18,
+        "postSeason": false,
+        "preSeason": false,
+        "startDate": 1672732800000
+      },
+      {
+        "endDate": 1711609200000,
+        "id": 19,
         "postSeason": true,
         "preSeason": false,
-        "startDate": 1577692800000
+        "startDate": 1673251200000
       }
     ],
     "segments": [
@@ -3615,13 +3400,13 @@
             "periods": [
               {
                 "id": 1,
-                "scoringPeriodEnd": 17,
+                "scoringPeriodEnd": 18,
                 "scoringPeriodStart": 1
               },
               {
                 "id": 2,
-                "scoringPeriodEnd": 18,
-                "scoringPeriodStart": 18
+                "scoringPeriodEnd": 19,
+                "scoringPeriodStart": 19
               }
             ]
           },
@@ -3720,6 +3505,11 @@
                 "id": 18,
                 "scoringPeriodEnd": 18,
                 "scoringPeriodStart": 18
+              },
+              {
+                "id": 19,
+                "scoringPeriodEnd": 19,
+                "scoringPeriodStart": 19
               }
             ]
           },
@@ -3818,6 +3608,11 @@
                 "id": 18,
                 "scoringPeriodEnd": 18,
                 "scoringPeriodStart": 18
+              },
+              {
+                "id": 19,
+                "scoringPeriodEnd": 19,
+                "scoringPeriodStart": 19
               }
             ]
           }
@@ -3873,105 +3668,55 @@
     ],
     "statGroups": {
       "coaching": {
-        "fixed": [
-          "TW",
-          "TL",
-          "WM1",
-          "WM5",
-          "WM10",
-          "WM15",
-          "WM20",
-          "WM25"
-        ],
+        "fixed": ["TW", "TL", "WM1", "WM5", "WM10", "WM15", "WM20", "WM25"],
         "name": "Coaching"
       },
       "coachingBrief": {
-        "fixed": [
-          "TW",
-          "MGN"
-        ],
+        "fixed": ["TW", "MGN"],
         "name": "Coaching"
       },
       "defensive": {
-        "fixed": [
-          "TK",
-          "SK",
-          "FF",
-          "FR",
-          "INT",
-          "TRTD"
-        ],
+        "fixed": ["TK", "SK", "FF", "FR", "INT", "TRTD"],
         "name": "Defensive"
       },
       "defensiveBrief": {
-        "fixed": [
-          "TK",
-          "SK",
-          "FF",
-          "FR",
-          "INT"
-        ],
+        "fixed": ["TK", "SK", "FF", "FR", "INT"],
         "name": "Defensive"
       },
       "kicking": {
         "fixed": [
           {
-            "stats": [
-              "FG0",
-              "FGA0"
-            ]
+            "stats": ["FG0", "FGA0"]
           },
           {
-            "stats": [
-              "FG40",
-              "FGA40"
-            ]
+            "stats": ["FG40", "FGA40"]
           },
           {
-            "stats": [
-              "FG50P",
-              "FGA50P"
-            ]
+            "stats": ["FG50P", "FGA50P"]
           },
           {
-            "stats": [
-              "FG",
-              "FGA"
-            ]
+            "stats": ["FG", "FGA"]
           },
           {
-            "stats": [
-              "PAT",
-              "PATA"
-            ]
+            "stats": ["PAT", "PATA"]
           }
         ],
         "name": "Kicking"
       },
       "misc": {
-        "fixed": [
-          "PTL",
-          "FUML",
-          "TRTD"
-        ],
+        "fixed": ["PTL", "FUML", "TRTD"],
         "name": "Misc"
       },
       "passing": {
         "fixed": [
           {
-            "stats": [
-              "PC",
-              "PA"
-            ]
+            "stats": ["PC", "PA"]
           },
           "CPCT",
           "PY",
           "PTD",
           {
-            "stats": [
-              "INTT",
-              "FUML"
-            ]
+            "stats": ["INTT", "FUML"]
           }
         ],
         "name": "Passing"
@@ -3979,10 +3724,7 @@
       "passingBrief": {
         "fixed": [
           {
-            "stats": [
-              "PC",
-              "PA"
-            ]
+            "stats": ["PC", "PA"]
           },
           "PY",
           "PTD",
@@ -3991,77 +3733,35 @@
         "name": "Passing"
       },
       "punting": {
-        "fixed": [
-          "PT",
-          "PTAVG",
-          "PTB",
-          "PT20",
-          "PTTB"
-        ],
+        "fixed": ["PT", "PTAVG", "PTB", "PT20", "PTTB"],
         "name": "Punting"
       },
       "receiving": {
-        "fixed": [
-          "REC",
-          "REY",
-          "YPC",
-          "RETD",
-          "RET"
-        ],
+        "fixed": ["REC", "REY", "YPC", "RETD", "RET"],
         "name": "Receiving"
       },
       "receivingBriefLive": {
-        "fixed": [
-          "REC",
-          "REY",
-          "RETD",
-          "RET"
-        ],
+        "fixed": ["REC", "REY", "RETD", "RET"],
         "name": "Receiving"
       },
       "rushing": {
-        "fixed": [
-          "RA",
-          "RY",
-          "RYPA",
-          "RTD"
-        ],
+        "fixed": ["RA", "RY", "RYPA", "RTD"],
         "name": "Rushing"
       },
       "rushingBrief": {
-        "fixed": [
-          "RA",
-          "RY",
-          "RTD"
-        ],
+        "fixed": ["RA", "RY", "RTD"],
         "name": "Rushing"
       },
       "teamDefenseAndSpecialTeams": {
-        "fixed": [
-          "TRTD",
-          "INT",
-          "FR",
-          "SK",
-          "SF",
-          "BLKK",
-          "PTSA",
-          "YA"
-        ],
+        "fixed": ["TRTD", "INT", "FR", "SK", "SF", "BLKK", "PTSA", "YA"],
         "name": "Team Defense / Special Teams"
       },
       "touchdownReturn": {
-        "fixed": [
-          "INTTD",
-          "FRTD",
-          "TRTD"
-        ],
+        "fixed": ["INTTD", "FRTD", "TRTD"],
         "name": "TD Returns"
       },
       "touchdownReturnBrief": {
-        "fixed": [
-          "INTTD",
-          "FRTD"
-        ],
+        "fixed": ["INTTD", "FRTD"],
         "name": "TD Returns"
       }
     },
@@ -4923,7 +4623,6 @@
         {
           "abbrev": "RECS",
           "active": true,
-          "apiIdentifier": "receiving.receptions",
           "derived": false,
           "description": "Receptions",
           "display": false,
@@ -5326,7 +5025,7 @@
         {
           "abbrev": "FTD",
           "active": true,
-          "apiIdentifier": "general.fumblesTouchdowns",
+          "apiIdentifier": "general.offensiveFumblesTouchdowns",
           "derived": false,
           "description": "Fumble Recovered for TD",
           "display": true,
@@ -5938,7 +5637,7 @@
         {
           "abbrev": "FR",
           "active": true,
-          "apiIdentifier": "general.fumblesRecovered",
+          "apiIdentifier": "returning.oppFumbleRecoveries",
           "derived": false,
           "description": "Each Fumble Recovered",
           "display": true,
@@ -5961,6 +5660,7 @@
         {
           "abbrev": "BLKK",
           "active": true,
+          "apiIdentifier": "defensive.kicksBlocked",
           "derived": false,
           "description": "Blocked Punt, PAT or FG",
           "display": true,
@@ -6029,7 +5729,6 @@
         {
           "abbrev": "HALFSK",
           "active": true,
-          "apiIdentifier": "defensive.sacksAssisted",
           "derived": false,
           "description": "1/2 Sack",
           "display": true,
@@ -6046,7 +5745,7 @@
         {
           "abbrev": "KRTD",
           "active": true,
-          "apiIdentifier": "kicking.kickoffReturnTouchdowns",
+          "apiIdentifier": "returning.kickReturnTouchdowns",
           "derived": false,
           "description": "Kickoff Return TD",
           "display": true,
@@ -6118,7 +5817,7 @@
         {
           "abbrev": "FRTD",
           "active": true,
-          "apiIdentifier": "general.fumblesTouchdowns",
+          "apiIdentifier": "general.defensiveFumblesTouchdowns",
           "derived": false,
           "description": "Fumble Return TD",
           "display": true,
@@ -6142,7 +5841,6 @@
         {
           "abbrev": "TRTD",
           "active": true,
-          "apiIdentifier": "scoring.returnTouchdowns",
           "derived": false,
           "description": "Total Return TD",
           "display": false,
@@ -6294,7 +5992,7 @@
         {
           "abbrev": "KR",
           "active": true,
-          "apiIdentifier": "kicking.kickoffReturnYards",
+          "apiIdentifier": "returning.kickReturnYards",
           "derived": false,
           "description": "Kickoff Return Yards",
           "display": true,
@@ -6311,7 +6009,7 @@
         {
           "abbrev": "PR",
           "active": true,
-          "apiIdentifier": "punting.puntReturnYards",
+          "apiIdentifier": "returning.puntReturnYards",
           "derived": false,
           "description": "Punt Return Yards",
           "display": true,
@@ -7126,7 +6824,6 @@
         {
           "abbrev": "PPG",
           "active": true,
-          "apiIdentifier": "scoring.totalPointsPerGame",
           "derived": true,
           "description": "Points Scored Per Game",
           "display": false,
@@ -7621,7 +7318,6 @@
         {
           "abbrev": "DPTSA",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST Points Allowed",
           "display": true,
@@ -7638,7 +7334,6 @@
         {
           "abbrev": "DPA0",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 0 points allowed",
           "display": true,
@@ -7655,7 +7350,6 @@
         {
           "abbrev": "DPA1",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 1-6 points allowed",
           "display": true,
@@ -7672,7 +7366,6 @@
         {
           "abbrev": "DPA7",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 7-13 points allowed",
           "display": true,
@@ -7689,7 +7382,6 @@
         {
           "abbrev": "DPA14",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 14-17 points allowed",
           "display": true,
@@ -7706,7 +7398,6 @@
         {
           "abbrev": "DPA18",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 18-21 points allowed",
           "display": true,
@@ -7723,7 +7414,6 @@
         {
           "abbrev": "DPA22",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 22-27 points allowed",
           "display": true,
@@ -7740,7 +7430,6 @@
         {
           "abbrev": "DPA28",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 28-34 points allowed",
           "display": true,
@@ -7757,7 +7446,6 @@
         {
           "abbrev": "DPA35",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 35-45 points allowed",
           "display": true,
@@ -7774,7 +7462,6 @@
         {
           "abbrev": "DPA46",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 46+ points allowed",
           "display": true,
@@ -7791,8 +7478,7 @@
         {
           "abbrev": "DPAPG",
           "active": true,
-          "apiIdentifier": "TODO",
-          "derived": false,
+          "derived": true,
           "description": "D/ST Points Allowed Per Game",
           "display": false,
           "displayAbbrev": "DPAPG",
@@ -7803,12 +7489,22 @@
           "pointsScoringEligible": false,
           "rotoScoringEligible": false,
           "statCategoryId": 0,
+          "statDerivation": {
+            "defaultInvalid": 0,
+            "derivedFromStats": {
+              "a": 187,
+              "b": 210
+            },
+            "equation": "a / b",
+            "invalidStatCheck": null,
+            "secondaryDefaultInvalid": null
+          },
           "statTypeId": 0
         },
         {
           "abbrev": "FG50",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "kicking.fieldGoalsMade50_59",
           "derived": false,
           "description": "FG Made (50-59 yards)",
           "display": true,
@@ -7825,7 +7521,7 @@
         {
           "abbrev": "FGA50",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "kicking.fieldGoalAttempts50_59",
           "derived": false,
           "description": "FG Attempted (50-59 yards)",
           "display": true,
@@ -7842,7 +7538,6 @@
         {
           "abbrev": "FGM50",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "FG Missed (50-59 yards)",
           "display": true,
@@ -7859,7 +7554,7 @@
         {
           "abbrev": "FG60",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "kicking.fieldGoalsMade60_99",
           "derived": false,
           "description": "FG Made (60+ yards)",
           "display": true,
@@ -7876,7 +7571,7 @@
         {
           "abbrev": "FGA60",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "kicking.fieldGoalAttempts60_99",
           "derived": false,
           "description": "FG Attempted (60+ yards)",
           "display": true,
@@ -7893,7 +7588,6 @@
         {
           "abbrev": "FGM60",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "FG Missed (60+ yards)",
           "display": true,
@@ -7910,7 +7604,7 @@
         {
           "abbrev": "O2PRET",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "general.offensiveTwoPtReturns",
           "derived": false,
           "description": "Offensive 2pt Return",
           "display": false,
@@ -7927,7 +7621,7 @@
         {
           "abbrev": "D2PRET",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "defensive.twoPtReturns",
           "derived": false,
           "description": "Defensive 2pt Return",
           "display": true,
@@ -7944,7 +7638,6 @@
         {
           "abbrev": "2PRET",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "2pt Return",
           "display": true,
@@ -8039,6 +7732,396 @@
           "statTypeId": 0
         },
         {
+          "abbrev": "PFD",
+          "active": true,
+          "apiIdentifier": "passing.passingFirstDowns",
+          "derived": false,
+          "description": "Passing First Down",
+          "display": true,
+          "displayAbbrev": "PFD",
+          "displayOrder": 211,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 211,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "RFD",
+          "active": true,
+          "apiIdentifier": "rushing.rushingFirstDowns",
+          "derived": false,
+          "description": "Rushing First Down",
+          "display": true,
+          "displayAbbrev": "RFD",
+          "displayOrder": 212,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 212,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "REFD",
+          "active": true,
+          "apiIdentifier": "receiving.receivingFirstDowns",
+          "derived": false,
+          "description": "Receiving First Down",
+          "display": true,
+          "displayAbbrev": "REFD",
+          "displayOrder": 213,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 213,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGY",
+          "active": true,
+          "apiIdentifier": "kicking.fieldGoalsMadeYards",
+          "derived": false,
+          "description": "FG Made Yards",
+          "display": true,
+          "displayAbbrev": "FGY",
+          "displayOrder": 214,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 214,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGMY",
+          "active": true,
+          "apiIdentifier": "kicking.fieldGoalsMissedYards",
+          "derived": false,
+          "description": "FG Missed Yards",
+          "display": true,
+          "displayAbbrev": "FGMY",
+          "displayOrder": 215,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 215,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGAY",
+          "active": true,
+          "apiIdentifier": "kicking.fieldGoalAttemptYards",
+          "derived": false,
+          "description": "FG Attempt Yards",
+          "display": true,
+          "displayAbbrev": "FGAY",
+          "displayOrder": 216,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 216,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGY5",
+          "active": true,
+          "derived": false,
+          "description": "Every 5 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY5",
+          "displayOrder": 217,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 217,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGY10",
+          "active": true,
+          "derived": false,
+          "description": "Every 10 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY10",
+          "displayOrder": 218,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 218,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGY20",
+          "active": true,
+          "derived": false,
+          "description": "Every 20 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY20",
+          "displayOrder": 219,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 219,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGY25",
+          "active": true,
+          "derived": false,
+          "description": "Every 25 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY25",
+          "displayOrder": 220,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 220,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGY50",
+          "active": true,
+          "derived": false,
+          "description": "Every 50 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY50",
+          "displayOrder": 221,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 221,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGY100",
+          "active": true,
+          "derived": false,
+          "description": "Every 100 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY100",
+          "displayOrder": 222,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 222,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGMY5",
+          "active": true,
+          "derived": false,
+          "description": "Every 5 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY5",
+          "displayOrder": 223,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 223,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGMY10",
+          "active": true,
+          "derived": false,
+          "description": "Every 10 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY10",
+          "displayOrder": 224,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 224,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGMY20",
+          "active": true,
+          "derived": false,
+          "description": "Every 20 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY20",
+          "displayOrder": 225,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 225,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGMY25",
+          "active": true,
+          "derived": false,
+          "description": "Every 25 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY25",
+          "displayOrder": 226,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 226,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGMY50",
+          "active": true,
+          "derived": false,
+          "description": "Every 50 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY50",
+          "displayOrder": 227,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 227,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGMY100",
+          "active": true,
+          "derived": false,
+          "description": "Every 100 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY100",
+          "displayOrder": 228,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 228,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGAY5",
+          "active": true,
+          "derived": false,
+          "description": "Every 5 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY5",
+          "displayOrder": 229,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 229,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGAY10",
+          "active": true,
+          "derived": false,
+          "description": "Every 10 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY10",
+          "displayOrder": 230,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 230,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGAY20",
+          "active": true,
+          "derived": false,
+          "description": "Every 20 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY20",
+          "displayOrder": 231,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 231,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGAY25",
+          "active": true,
+          "derived": false,
+          "description": "Every 25 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY25",
+          "displayOrder": 232,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 232,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGAY50",
+          "active": true,
+          "derived": false,
+          "description": "Every 50 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY50",
+          "displayOrder": 233,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 233,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGAY100",
+          "active": true,
+          "derived": false,
+          "description": "Every 100 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY100",
+          "displayOrder": 234,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 234,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
           "abbrev": "MISCTD",
           "active": true,
           "derived": true,
@@ -8062,6 +8145,32 @@
               "e": 104
             },
             "equation": "a + b + c + d + e",
+            "invalidStatCheck": null,
+            "secondaryDefaultInvalid": null
+          },
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "RRETD",
+          "active": true,
+          "derived": true,
+          "description": "Total Rushing and Receiving TD",
+          "display": true,
+          "displayAbbrev": "TD",
+          "displayOrder": 10001,
+          "displaySortReversed": false,
+          "frontEndOnly": true,
+          "id": 10001,
+          "pointsScoringEligible": false,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statDerivation": {
+            "defaultInvalid": 0,
+            "derivedFromStats": {
+              "a": 25,
+              "b": 43
+            },
+            "equation": "a + b",
             "invalidStatCheck": null,
             "secondaryDefaultInvalid": null
           },
@@ -8121,6 +8230,8 @@
               },
               "SCORING_BREAKDOWN": {
                 "fixed": [
+                  "TW",
+                  "TL",
                   "PA",
                   "PC",
                   "INC",
@@ -8204,22 +8315,15 @@
           "1": {
             "contextOverrides": {
               "draft": {
-                "fixed": [
-                  "TK",
-                  "SK",
-                  "INT",
-                  "FR",
-                  "DEFRETTD"
-                ]
+                "fixed": ["TK", "SK", "INT", "FR", "DEFRETTD"]
               },
               "projections": {
-                "statGroups": [
-                  "defensiveBrief",
-                  "touchdownReturnBrief"
-                ]
+                "statGroups": ["defensiveBrief", "touchdownReturnBrief"]
               },
               "SCORING_BREAKDOWN": {
                 "fixed": [
+                  "TW",
+                  "TL",
                   "FTD",
                   "BLKKRTD",
                   "DEFRETTD",
@@ -8254,24 +8358,17 @@
               }
             },
             "statCategoryId": 1,
-            "statGroups": [
-              "defensiveBrief",
-              "touchdownReturn"
-            ]
+            "statGroups": ["defensiveBrief", "touchdownReturn"]
           },
           "2": {
             "contextOverrides": {
               "draft": {
-                "fixed": [
-                  "PT",
-                  "PTAVG",
-                  "PT20",
-                  "PT10",
-                  "PTB"
-                ]
+                "fixed": ["PT", "PTAVG", "PT20", "PT10", "PTB"]
               },
               "SCORING_BREAKDOWN": {
                 "fixed": [
+                  "TW",
+                  "TL",
                   "FTD",
                   "PT",
                   "PTY",
@@ -8293,25 +8390,17 @@
               }
             },
             "statCategoryId": 2,
-            "statGroups": [
-              "punting"
-            ]
+            "statGroups": ["punting"]
           },
           "3": {
             "contextOverrides": {
               "draft": {
-                "fixed": [
-                  "FGA",
-                  "FG",
-                  "FG0",
-                  "FG40",
-                  "FG50P",
-                  "PATA",
-                  "PAT"
-                ]
+                "fixed": ["FGA", "FG", "FG0", "FG40", "FG50P", "PATA", "PAT"]
               },
               "SCORING_BREAKDOWN": {
                 "fixed": [
+                  "TW",
+                  "TL",
                   "FTD",
                   "FG50P",
                   "FGA50P",
@@ -8338,21 +8427,15 @@
               }
             },
             "statCategoryId": 3,
-            "statGroups": [
-              "kicking"
-            ]
+            "statGroups": ["kicking"]
           },
           "4": {
             "contextOverrides": {
               "draft": {
-                "fixed": [
-                  "TW"
-                ]
+                "fixed": ["TW"]
               },
               "projections": {
-                "statGroups": [
-                  "coachingBrief"
-                ]
+                "statGroups": ["coachingBrief"]
               },
               "SCORING_BREAKDOWN": {
                 "fixed": [
@@ -8386,29 +8469,20 @@
               }
             },
             "statCategoryId": 4,
-            "statGroups": [
-              "coaching"
-            ]
+            "statGroups": ["coaching"]
           },
           "5": {
             "contextOverrides": {
               "draft": {
-                "fixed": [
-                  "TK",
-                  "SK",
-                  "INT",
-                  "FR",
-                  "DEFRETTD"
-                ]
+                "fixed": ["TK", "SK", "INT", "FR", "DEFRETTD"]
               },
               "projections": {
-                "statGroups": [
-                  "defensiveBrief",
-                  "touchdownReturnBrief"
-                ]
+                "statGroups": ["defensiveBrief", "touchdownReturnBrief"]
               },
               "SCORING_BREAKDOWN": {
                 "fixed": [
+                  "TW",
+                  "TL",
                   "FTD",
                   "PA0",
                   "PA1",
@@ -8461,153 +8535,80 @@
               }
             },
             "statCategoryId": 5,
-            "statGroups": [
-              "teamDefenseAndSpecialTeams"
-            ]
+            "statGroups": ["teamDefenseAndSpecialTeams"]
           }
         },
         "positionalGroup": {
           "Quarterbacks": {
-            "statGroups": [
-              "passing",
-              "rushingBrief"
-            ]
+            "statGroups": ["passing", "rushingBrief"]
           },
           "Backs and Receivers": {
-            "statGroups": [
-              "rushing",
-              "receiving"
-            ]
+            "statGroups": ["rushing", "receiving"]
           },
           "Defensive Players": {
-            "statGroups": [
-              "defensive"
-            ]
+            "statGroups": ["defensive"]
           },
           "Team D/ST": {
-            "statGroups": [
-              "teamDefenseAndSpecialTeams"
-            ]
+            "statGroups": ["teamDefenseAndSpecialTeams"]
           },
           "Kickers": {
-            "statGroups": [
-              "kicking"
-            ]
+            "statGroups": ["kicking"]
           },
           "Punters": {
-            "statGroups": [
-              "punting"
-            ]
+            "statGroups": ["punting"]
           },
           "Coaches": {
-            "statGroups": [
-              "coaching"
-            ]
+            "statGroups": ["coaching"]
           }
         }
       },
       "gamepackageStatLine": [
         {
-          "positions": [
-            1,
-            15
-          ],
-          "statIds": [
-            3,
-            4,
-            20
-          ]
+          "defaults": [3],
+          "positions": [1, 15],
+          "statIds": [3, 4, 20]
         },
         {
-          "positions": [
-            2
-          ],
-          "statIds": [
-            24,
-            25,
-            72
-          ]
+          "defaults": [24],
+          "positions": [2],
+          "statIds": [24, 25, 72]
         },
         {
-          "positions": [
-            3,
-            4
-          ],
-          "statIds": [
-            53,
-            42,
-            43
-          ]
+          "defaults": [42],
+          "positions": [3, 4],
+          "statIds": [53, 42, 43]
         },
         {
-          "positions": [
-            5
-          ],
+          "defaults": ["FG", "XP"],
+          "positions": [5],
           "statIds": [
             {
-              "FG": [
-                83,
-                84
-              ]
+              "FG": [83, 84]
             },
             {
-              "XP": [
-                86,
-                87
-              ]
+              "XP": [86, 87]
             }
           ]
         },
         {
-          "positions": [
-            7
-          ],
-          "statIds": [
-            138,
-            142,
-            141,
-            145
-          ]
+          "defaults": [138],
+          "positions": [7],
+          "statIds": [138, 142, 141, 145]
         },
         {
-          "positions": [
-            9,
-            10,
-            11,
-            12,
-            13,
-            17
-          ],
-          "statIds": [
-            73,
-            99,
-            106,
-            96,
-            95,
-            105
-          ]
+          "defaults": [109],
+          "positions": [9, 10, 11, 12, 13, 17],
+          "statIds": [109, 99, 106, 96, 95, 105]
         },
         {
-          "positions": [
-            16
-          ],
-          "statIds": [
-            105,
-            95,
-            96,
-            98,
-            120,
-            97
-          ]
+          "defaults": [120],
+          "positions": [16],
+          "statIds": [105, 95, 96, 98, 120, 97]
         },
         {
-          "positions": [
-            14
-          ],
-          "statIds": [
-            155,
-            160
-          ]
+          "defaults": [160],
+          "positions": [14],
+          "statIds": [155, 160]
         }
       ],
       "statsMap": {
@@ -9361,7 +9362,6 @@
         "41": {
           "abbrev": "RECS",
           "active": true,
-          "apiIdentifier": "receiving.receptions",
           "derived": false,
           "description": "Receptions",
           "display": false,
@@ -9764,7 +9764,7 @@
         "63": {
           "abbrev": "FTD",
           "active": true,
-          "apiIdentifier": "general.fumblesTouchdowns",
+          "apiIdentifier": "general.offensiveFumblesTouchdowns",
           "derived": false,
           "description": "Fumble Recovered for TD",
           "display": true,
@@ -10376,7 +10376,7 @@
         "96": {
           "abbrev": "FR",
           "active": true,
-          "apiIdentifier": "general.fumblesRecovered",
+          "apiIdentifier": "returning.oppFumbleRecoveries",
           "derived": false,
           "description": "Each Fumble Recovered",
           "display": true,
@@ -10399,6 +10399,7 @@
         "97": {
           "abbrev": "BLKK",
           "active": true,
+          "apiIdentifier": "defensive.kicksBlocked",
           "derived": false,
           "description": "Blocked Punt, PAT or FG",
           "display": true,
@@ -10467,7 +10468,6 @@
         "100": {
           "abbrev": "HALFSK",
           "active": true,
-          "apiIdentifier": "defensive.sacksAssisted",
           "derived": false,
           "description": "1/2 Sack",
           "display": true,
@@ -10484,7 +10484,7 @@
         "101": {
           "abbrev": "KRTD",
           "active": true,
-          "apiIdentifier": "kicking.kickoffReturnTouchdowns",
+          "apiIdentifier": "returning.kickReturnTouchdowns",
           "derived": false,
           "description": "Kickoff Return TD",
           "display": true,
@@ -10556,7 +10556,7 @@
         "104": {
           "abbrev": "FRTD",
           "active": true,
-          "apiIdentifier": "general.fumblesTouchdowns",
+          "apiIdentifier": "general.defensiveFumblesTouchdowns",
           "derived": false,
           "description": "Fumble Return TD",
           "display": true,
@@ -10580,7 +10580,6 @@
         "105": {
           "abbrev": "TRTD",
           "active": true,
-          "apiIdentifier": "scoring.returnTouchdowns",
           "derived": false,
           "description": "Total Return TD",
           "display": false,
@@ -10732,7 +10731,7 @@
         "114": {
           "abbrev": "KR",
           "active": true,
-          "apiIdentifier": "kicking.kickoffReturnYards",
+          "apiIdentifier": "returning.kickReturnYards",
           "derived": false,
           "description": "Kickoff Return Yards",
           "display": true,
@@ -10749,7 +10748,7 @@
         "115": {
           "abbrev": "PR",
           "active": true,
-          "apiIdentifier": "punting.puntReturnYards",
+          "apiIdentifier": "returning.puntReturnYards",
           "derived": false,
           "description": "Punt Return Yards",
           "display": true,
@@ -11564,7 +11563,6 @@
         "159": {
           "abbrev": "PPG",
           "active": true,
-          "apiIdentifier": "scoring.totalPointsPerGame",
           "derived": true,
           "description": "Points Scored Per Game",
           "display": false,
@@ -12059,7 +12057,6 @@
         "187": {
           "abbrev": "DPTSA",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST Points Allowed",
           "display": true,
@@ -12076,7 +12073,6 @@
         "188": {
           "abbrev": "DPA0",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 0 points allowed",
           "display": true,
@@ -12093,7 +12089,6 @@
         "189": {
           "abbrev": "DPA1",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 1-6 points allowed",
           "display": true,
@@ -12110,7 +12105,6 @@
         "190": {
           "abbrev": "DPA7",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 7-13 points allowed",
           "display": true,
@@ -12127,7 +12121,6 @@
         "191": {
           "abbrev": "DPA14",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 14-17 points allowed",
           "display": true,
@@ -12144,7 +12137,6 @@
         "192": {
           "abbrev": "DPA18",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 18-21 points allowed",
           "display": true,
@@ -12161,7 +12153,6 @@
         "193": {
           "abbrev": "DPA22",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 22-27 points allowed",
           "display": true,
@@ -12178,7 +12169,6 @@
         "194": {
           "abbrev": "DPA28",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 28-34 points allowed",
           "display": true,
@@ -12195,7 +12185,6 @@
         "195": {
           "abbrev": "DPA35",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 35-45 points allowed",
           "display": true,
@@ -12212,7 +12201,6 @@
         "196": {
           "abbrev": "DPA46",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "D/ST 46+ points allowed",
           "display": true,
@@ -12229,8 +12217,7 @@
         "197": {
           "abbrev": "DPAPG",
           "active": true,
-          "apiIdentifier": "TODO",
-          "derived": false,
+          "derived": true,
           "description": "D/ST Points Allowed Per Game",
           "display": false,
           "displayAbbrev": "DPAPG",
@@ -12241,12 +12228,22 @@
           "pointsScoringEligible": false,
           "rotoScoringEligible": false,
           "statCategoryId": 0,
+          "statDerivation": {
+            "defaultInvalid": 0,
+            "derivedFromStats": {
+              "a": 187,
+              "b": 210
+            },
+            "equation": "a / b",
+            "invalidStatCheck": null,
+            "secondaryDefaultInvalid": null
+          },
           "statTypeId": 0
         },
         "198": {
           "abbrev": "FG50",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "kicking.fieldGoalsMade50_59",
           "derived": false,
           "description": "FG Made (50-59 yards)",
           "display": true,
@@ -12263,7 +12260,7 @@
         "199": {
           "abbrev": "FGA50",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "kicking.fieldGoalAttempts50_59",
           "derived": false,
           "description": "FG Attempted (50-59 yards)",
           "display": true,
@@ -12280,7 +12277,6 @@
         "200": {
           "abbrev": "FGM50",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "FG Missed (50-59 yards)",
           "display": true,
@@ -12297,7 +12293,7 @@
         "201": {
           "abbrev": "FG60",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "kicking.fieldGoalsMade60_99",
           "derived": false,
           "description": "FG Made (60+ yards)",
           "display": true,
@@ -12314,7 +12310,7 @@
         "202": {
           "abbrev": "FGA60",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "kicking.fieldGoalAttempts60_99",
           "derived": false,
           "description": "FG Attempted (60+ yards)",
           "display": true,
@@ -12331,7 +12327,6 @@
         "203": {
           "abbrev": "FGM60",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "FG Missed (60+ yards)",
           "display": true,
@@ -12348,7 +12343,7 @@
         "204": {
           "abbrev": "O2PRET",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "general.offensiveTwoPtReturns",
           "derived": false,
           "description": "Offensive 2pt Return",
           "display": false,
@@ -12365,7 +12360,7 @@
         "205": {
           "abbrev": "D2PRET",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "defensive.twoPtReturns",
           "derived": false,
           "description": "Defensive 2pt Return",
           "display": true,
@@ -12382,7 +12377,6 @@
         "206": {
           "abbrev": "2PRET",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "2pt Return",
           "display": true,
@@ -12476,6 +12470,396 @@
           "statCategoryId": 0,
           "statTypeId": 0
         },
+        "211": {
+          "abbrev": "PFD",
+          "active": true,
+          "apiIdentifier": "passing.passingFirstDowns",
+          "derived": false,
+          "description": "Passing First Down",
+          "display": true,
+          "displayAbbrev": "PFD",
+          "displayOrder": 211,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 211,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "212": {
+          "abbrev": "RFD",
+          "active": true,
+          "apiIdentifier": "rushing.rushingFirstDowns",
+          "derived": false,
+          "description": "Rushing First Down",
+          "display": true,
+          "displayAbbrev": "RFD",
+          "displayOrder": 212,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 212,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "213": {
+          "abbrev": "REFD",
+          "active": true,
+          "apiIdentifier": "receiving.receivingFirstDowns",
+          "derived": false,
+          "description": "Receiving First Down",
+          "display": true,
+          "displayAbbrev": "REFD",
+          "displayOrder": 213,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 213,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "214": {
+          "abbrev": "FGY",
+          "active": true,
+          "apiIdentifier": "kicking.fieldGoalsMadeYards",
+          "derived": false,
+          "description": "FG Made Yards",
+          "display": true,
+          "displayAbbrev": "FGY",
+          "displayOrder": 214,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 214,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "215": {
+          "abbrev": "FGMY",
+          "active": true,
+          "apiIdentifier": "kicking.fieldGoalsMissedYards",
+          "derived": false,
+          "description": "FG Missed Yards",
+          "display": true,
+          "displayAbbrev": "FGMY",
+          "displayOrder": 215,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 215,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "216": {
+          "abbrev": "FGAY",
+          "active": true,
+          "apiIdentifier": "kicking.fieldGoalAttemptYards",
+          "derived": false,
+          "description": "FG Attempt Yards",
+          "display": true,
+          "displayAbbrev": "FGAY",
+          "displayOrder": 216,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 216,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "217": {
+          "abbrev": "FGY5",
+          "active": true,
+          "derived": false,
+          "description": "Every 5 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY5",
+          "displayOrder": 217,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 217,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "218": {
+          "abbrev": "FGY10",
+          "active": true,
+          "derived": false,
+          "description": "Every 10 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY10",
+          "displayOrder": 218,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 218,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "219": {
+          "abbrev": "FGY20",
+          "active": true,
+          "derived": false,
+          "description": "Every 20 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY20",
+          "displayOrder": 219,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 219,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "220": {
+          "abbrev": "FGY25",
+          "active": true,
+          "derived": false,
+          "description": "Every 25 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY25",
+          "displayOrder": 220,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 220,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "221": {
+          "abbrev": "FGY50",
+          "active": true,
+          "derived": false,
+          "description": "Every 50 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY50",
+          "displayOrder": 221,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 221,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "222": {
+          "abbrev": "FGY100",
+          "active": true,
+          "derived": false,
+          "description": "Every 100 FG Made yards",
+          "display": true,
+          "displayAbbrev": "FGY100",
+          "displayOrder": 222,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 222,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "223": {
+          "abbrev": "FGMY5",
+          "active": true,
+          "derived": false,
+          "description": "Every 5 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY5",
+          "displayOrder": 223,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 223,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "224": {
+          "abbrev": "FGMY10",
+          "active": true,
+          "derived": false,
+          "description": "Every 10 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY10",
+          "displayOrder": 224,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 224,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "225": {
+          "abbrev": "FGMY20",
+          "active": true,
+          "derived": false,
+          "description": "Every 20 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY20",
+          "displayOrder": 225,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 225,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "226": {
+          "abbrev": "FGMY25",
+          "active": true,
+          "derived": false,
+          "description": "Every 25 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY25",
+          "displayOrder": 226,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 226,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "227": {
+          "abbrev": "FGMY50",
+          "active": true,
+          "derived": false,
+          "description": "Every 50 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY50",
+          "displayOrder": 227,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 227,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "228": {
+          "abbrev": "FGMY100",
+          "active": true,
+          "derived": false,
+          "description": "Every 100 FG Missed yards",
+          "display": true,
+          "displayAbbrev": "FGMY100",
+          "displayOrder": 228,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 228,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "229": {
+          "abbrev": "FGAY5",
+          "active": true,
+          "derived": false,
+          "description": "Every 5 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY5",
+          "displayOrder": 229,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 229,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "230": {
+          "abbrev": "FGAY10",
+          "active": true,
+          "derived": false,
+          "description": "Every 10 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY10",
+          "displayOrder": 230,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 230,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "231": {
+          "abbrev": "FGAY20",
+          "active": true,
+          "derived": false,
+          "description": "Every 20 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY20",
+          "displayOrder": 231,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 231,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "232": {
+          "abbrev": "FGAY25",
+          "active": true,
+          "derived": false,
+          "description": "Every 25 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY25",
+          "displayOrder": 232,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 232,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "233": {
+          "abbrev": "FGAY50",
+          "active": true,
+          "derived": false,
+          "description": "Every 50 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY50",
+          "displayOrder": 233,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 233,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        "234": {
+          "abbrev": "FGAY100",
+          "active": true,
+          "derived": false,
+          "description": "Every 100 FG Attempt yards",
+          "display": true,
+          "displayAbbrev": "FGAY100",
+          "displayOrder": 234,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 234,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
         "10000": {
           "abbrev": "MISCTD",
           "active": true,
@@ -12504,6 +12888,32 @@
             "secondaryDefaultInvalid": null
           },
           "statTypeId": 0
+        },
+        "10001": {
+          "abbrev": "RRETD",
+          "active": true,
+          "derived": true,
+          "description": "Total Rushing and Receiving TD",
+          "display": true,
+          "displayAbbrev": "TD",
+          "displayOrder": 10001,
+          "displaySortReversed": false,
+          "frontEndOnly": true,
+          "id": 10001,
+          "pointsScoringEligible": false,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statDerivation": {
+            "defaultInvalid": 0,
+            "derivedFromStats": {
+              "a": 25,
+              "b": 43
+            },
+            "equation": "a + b",
+            "invalidStatCheck": null,
+            "secondaryDefaultInvalid": null
+          },
+          "statTypeId": 0
         }
       },
       "draftStats": {
@@ -12518,35 +12928,19 @@
         "snake": {
           "statGroups": [
             {
-              "fixed": [
-                "PY",
-                "PTD",
-                "INTT"
-              ],
+              "fixed": ["PY", "PTD", "INTT"],
               "name": "Passing"
             },
             {
-              "fixed": [
-                "RY",
-                "RTD"
-              ],
+              "fixed": ["RY", "RTD"],
               "name": "Rushing"
             },
             {
-              "fixed": [
-                "REC",
-                "REY",
-                "RETD"
-              ],
+              "fixed": ["REC", "REY", "RETD"],
               "name": "Receiving"
             },
             {
-              "fixed": [
-                "INT",
-                "FR",
-                "PTSA",
-                "YA"
-              ],
+              "fixed": ["INT", "FR", "PTSA", "YA"],
               "name": "Team Defense / Special Teams"
             }
           ]
@@ -12555,10 +12949,7 @@
       "gameLogStats": {
         "1": [
           {
-            "stats": [
-              "PC",
-              "PA"
-            ]
+            "stats": ["PC", "PA"]
           },
           21,
           3,
@@ -12569,133 +12960,36 @@
           24,
           25
         ],
-        "2": [
-          23,
-          24,
-          39,
-          25,
-          53,
-          42,
-          43,
-          10000
-        ],
-        "3": [
-          53,
-          42,
-          60,
-          43,
-          58,
-          23,
-          24,
-          25,
-          10000
-        ],
-        "4": [
-          53,
-          42,
-          60,
-          43,
-          58,
-          23,
-          24,
-          25,
-          10000
-        ],
+        "2": [23, 24, 39, 25, 53, 42, 43, 10000],
+        "3": [53, 42, 60, 43, 58, 23, 24, 25, 10000],
+        "4": [53, 42, 60, 43, 58, 23, 24, 25, 10000],
         "5": [
           {
-            "stats": [
-              "FG0",
-              "FGA0"
-            ]
+            "stats": ["FG0", "FGA0"]
           },
           {
-            "stats": [
-              "FG40",
-              "FGA40"
-            ]
+            "stats": ["FG40", "FGA40"]
           },
           {
-            "stats": [
-              "FG50P",
-              "FGA50P"
-            ]
+            "stats": ["FG50P", "FGA50P"]
           },
           {
-            "stats": [
-              "FG",
-              "FGA"
-            ]
+            "stats": ["FG", "FGA"]
           },
           {
-            "stats": [
-              "PAT",
-              "PATA"
-            ]
+            "stats": ["PAT", "PATA"]
           }
         ],
-        "7": [
-          138,
-          147,
-          142,
-          141,
-          145
-        ],
-        "9": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ],
-        "10": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ],
-        "11": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ],
-        "12": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ],
-        "13": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ],
-        "14": [
-          155,
-          156,
-          166,
-          165,
-          164,
-          163,
-          162,
-          161
-        ],
+        "7": [138, 147, 142, 141, 145],
+        "9": [109, 99, 106, 96, 95, 105],
+        "10": [109, 99, 106, 96, 95, 105],
+        "11": [109, 99, 106, 96, 95, 105],
+        "12": [109, 99, 106, 96, 95, 105],
+        "13": [109, 99, 106, 96, 95, 105],
+        "14": [155, 156, 166, 165, 164, 163, 162, 161],
         "15": [
           {
-            "stats": [
-              "PC",
-              "PA"
-            ]
+            "stats": ["PC", "PA"]
           },
           21,
           3,
@@ -12706,31 +13000,13 @@
           24,
           25
         ],
-        "16": [
-          105,
-          95,
-          96,
-          99,
-          98,
-          97,
-          120
-        ],
-        "17": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ]
+        "16": [105, 95, 96, 99, 98, 97, 120],
+        "17": [109, 99, 106, 96, 95, 105]
       },
       "playerCardStats": {
         "1": [
           {
-            "stats": [
-              "PC",
-              "PA"
-            ]
+            "stats": ["PC", "PA"]
           },
           21,
           3,
@@ -12741,133 +13017,36 @@
           24,
           25
         ],
-        "2": [
-          23,
-          24,
-          39,
-          25,
-          53,
-          42,
-          43,
-          10000
-        ],
-        "3": [
-          53,
-          42,
-          60,
-          43,
-          58,
-          23,
-          24,
-          25,
-          10000
-        ],
-        "4": [
-          53,
-          42,
-          60,
-          43,
-          58,
-          23,
-          24,
-          25,
-          10000
-        ],
+        "2": [23, 24, 39, 25, 53, 42, 43, 10000],
+        "3": [53, 42, 60, 43, 58, 23, 24, 25, 10000],
+        "4": [53, 42, 60, 43, 58, 23, 24, 25, 10000],
         "5": [
           {
-            "stats": [
-              "FG0",
-              "FGA0"
-            ]
+            "stats": ["FG0", "FGA0"]
           },
           {
-            "stats": [
-              "FG40",
-              "FGA40"
-            ]
+            "stats": ["FG40", "FGA40"]
           },
           {
-            "stats": [
-              "FG50P",
-              "FGA50P"
-            ]
+            "stats": ["FG50P", "FGA50P"]
           },
           {
-            "stats": [
-              "FG",
-              "FGA"
-            ]
+            "stats": ["FG", "FGA"]
           },
           {
-            "stats": [
-              "PAT",
-              "PATA"
-            ]
+            "stats": ["PAT", "PATA"]
           }
         ],
-        "7": [
-          138,
-          147,
-          142,
-          141,
-          145
-        ],
-        "9": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ],
-        "10": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ],
-        "11": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ],
-        "12": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ],
-        "13": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ],
-        "14": [
-          155,
-          156,
-          166,
-          165,
-          164,
-          163,
-          162,
-          161
-        ],
+        "7": [138, 147, 142, 141, 145],
+        "9": [109, 99, 106, 96, 95, 105],
+        "10": [109, 99, 106, 96, 95, 105],
+        "11": [109, 99, 106, 96, 95, 105],
+        "12": [109, 99, 106, 96, 95, 105],
+        "13": [109, 99, 106, 96, 95, 105],
+        "14": [155, 156, 166, 165, 164, 163, 162, 161],
         "15": [
           {
-            "stats": [
-              "PC",
-              "PA"
-            ]
+            "stats": ["PC", "PA"]
           },
           21,
           3,
@@ -12878,408 +13057,120 @@
           24,
           25
         ],
-        "16": [
-          105,
-          95,
-          96,
-          99,
-          98,
-          97,
-          120
-        ],
-        "17": [
-          109,
-          99,
-          106,
-          96,
-          95,
-          105
-        ]
+        "16": [105, 95, 96, 99, 98, 97, 120],
+        "17": [109, 99, 106, 96, 95, 105]
+      },
+      "reportStats": {
+        "0": [3, 4, 24, 53, 42, 10001],
+        "1": [109, 99, 106, 96, 95],
+        "2": [138, 147, 142, 141, 145],
+        "3": [84, 80, 77, 74, 87, 86],
+        "4": [155, 156, 160],
+        "5": [105, 95, 96, 97, 120, 127]
       },
       "playerFullProjections": {
-        "1": [
-          [
-            "PC",
-            "PA"
-          ],
-          "PY",
-          "PTD",
-          "INTT",
-          "RA",
-          "RY",
-          "RTD"
-        ],
-        "2": [
-          "RA",
-          "RY",
-          "RYPA",
-          "RTD",
-          "REC",
-          "REY",
-          "RETD"
-        ],
-        "3": [
-          "RET",
-          "REC",
-          "REY",
-          "YPC",
-          "RETD",
-          "RA",
-          "RY",
-          "RTD"
-        ],
-        "4": [
-          "RET",
-          "REC",
-          "REY",
-          "YPC",
-          "RETD",
-          "RA",
-          "RY",
-          "RTD"
-        ],
+        "1": [["PC", "PA"], "PY", "PTD", "INTT", "RA", "RY", "RTD"],
+        "2": ["RA", "RY", "RYPA", "RTD", "REC", "REY", "RETD"],
+        "3": ["RET", "REC", "REY", "YPC", "RETD", "RA", "RY", "RTD"],
+        "4": ["RET", "REC", "REY", "YPC", "RETD", "RA", "RY", "RTD"],
         "5": [
-          [
-            "FG0",
-            "FGA0"
-          ],
-          [
-            "FG40",
-            "FGA40"
-          ],
-          [
-            "FG50P",
-            "FGA50P"
-          ],
-          [
-            "FG",
-            "FGA"
-          ],
-          [
-            "PAT",
-            "PATA"
-          ]
+          ["FG0", "FGA0"],
+          ["FG40", "FGA40"],
+          ["FG50P", "FGA50P"],
+          ["FG", "FGA"],
+          ["PAT", "PATA"]
         ],
         "7": [],
-        "9": [
-          "FF",
-          "FR",
-          "INT",
-          "SK",
-          "TKA",
-          "TK",
-          "PD"
-        ],
-        "10": [
-          "FF",
-          "FR",
-          "INT",
-          "SK",
-          "TKA",
-          "TK",
-          "PD"
-        ],
-        "11": [
-          "FF",
-          "FR",
-          "INT",
-          "SK",
-          "TKA",
-          "TK",
-          "PD"
-        ],
-        "12": [
-          "FF",
-          "FR",
-          "INT",
-          "SK",
-          "TKA",
-          "TK",
-          "PD"
-        ],
-        "13": [
-          "FF",
-          "FR",
-          "INT",
-          "SK",
-          "TKA",
-          "TK",
-          "PD"
-        ],
+        "9": ["FF", "FR", "INT", "SK", "TKA", "TK", "PD"],
+        "10": ["FF", "FR", "INT", "SK", "TKA", "TK", "PD"],
+        "11": ["FF", "FR", "INT", "SK", "TKA", "TK", "PD"],
+        "12": ["FF", "FR", "INT", "SK", "TKA", "TK", "PD"],
+        "13": ["FF", "FR", "INT", "SK", "TKA", "TK", "PD"],
         "14": [],
         "15": [],
-        "16": [
-          "SK",
-          "INT",
-          "FR",
-          "TRTD",
-          "PTSA",
-          "YA"
-        ],
-        "17": [
-          "FF",
-          "FR",
-          "INT",
-          "SK",
-          "TKA",
-          "TK",
-          "PD"
-        ]
+        "16": ["SK", "INT", "FR", "TRTD", "PTSA", "YA"],
+        "17": ["FF", "FR", "INT", "SK", "TKA", "TK", "PD"]
       },
       "playerChartStatAbbrevsByPositionId": {
-        "1": [
-          "PC",
-          "PA",
-          "PY",
-          "PTD",
-          "INTT",
-          "FUML",
-          "RA",
-          "RY",
-          "RTD"
-        ],
-        "2": [
-          "RA",
-          "RY",
-          "RTD",
-          "REC",
-          "REY",
-          "RETD",
-          "FUML"
-        ],
-        "3": [
-          "REC",
-          "REY",
-          "RETD",
-          "RA",
-          "RY",
-          "RTD",
-          "FUML"
-        ],
-        "4": [
-          "REC",
-          "REY",
-          "RETD"
-        ],
-        "5": [
-          "FG",
-          "FGA",
-          "PAT",
-          "PATA"
-        ],
-        "7": [
-          "PT",
-          "PTY",
-          "PT20",
-          "PTTB"
-        ],
-        "9": [
-          "TK",
-          "INT",
-          "FR",
-          "SK"
-        ],
-        "10": [
-          "TK",
-          "INT",
-          "FR",
-          "SK"
-        ],
-        "11": [
-          "TK",
-          "INT",
-          "FR",
-          "SK"
-        ],
-        "12": [
-          "TK",
-          "INT",
-          "FR",
-          "SK"
-        ],
-        "13": [
-          "TK",
-          "INT",
-          "FR",
-          "SK"
-        ],
-        "14": [
-          "TW",
-          "MGN"
-        ],
-        "15": [
-          "PC",
-          "PA",
-          "PY",
-          "PTD",
-          "INTT",
-          "FUML",
-          "RA",
-          "RY",
-          "RTD"
-        ],
-        "16": [
-          "PTSA",
-          "INT",
-          "FR",
-          "TRTD"
-        ],
-        "17": [
-          "TK",
-          "INT",
-          "FR",
-          "SK"
-        ]
+        "1": ["PC", "PA", "PY", "PTD", "INTT", "FUML", "RA", "RY", "RTD"],
+        "2": ["RA", "RY", "RTD", "REC", "REY", "RETD", "FUML"],
+        "3": ["REC", "REY", "RETD", "RA", "RY", "RTD", "FUML"],
+        "4": ["REC", "REY", "RETD"],
+        "5": ["FG", "FGA", "PAT", "PATA"],
+        "7": ["PT", "PTY", "PT20", "PTTB"],
+        "9": ["TK", "INT", "FR", "SK"],
+        "10": ["TK", "INT", "FR", "SK"],
+        "11": ["TK", "INT", "FR", "SK"],
+        "12": ["TK", "INT", "FR", "SK"],
+        "13": ["TK", "INT", "FR", "SK"],
+        "14": ["TW", "MGN"],
+        "15": ["PC", "PA", "PY", "PTD", "INTT", "FUML", "RA", "RY", "RTD"],
+        "16": ["PTSA", "INT", "FR", "TRTD"],
+        "17": ["TK", "INT", "FR", "SK"]
       },
       "pvoModalStats": {
-        "1": [
-          "PC_PA",
-          "PY",
-          "PTD"
-        ],
-        "2": [
-          "RA",
-          "RY",
-          "RTD"
-        ],
-        "3": [
-          "REC",
-          "REY",
-          "RETD"
-        ],
-        "4": [
-          "REC",
-          "REY",
-          "RETD"
-        ],
-        "5": [
-          "FGA",
-          "FG",
-          "PAT"
-        ],
-        "7": [
-          "PT",
-          "PTAVG",
-          "PTB"
-        ],
-        "9": [
-          "TK",
-          "SK",
-          "TRTD"
-        ],
-        "10": [
-          "TK",
-          "SK",
-          "TRTD"
-        ],
-        "11": [
-          "TK",
-          "SK",
-          "TRTD"
-        ],
-        "12": [
-          "TK",
-          "SK",
-          "TRTD"
-        ],
-        "13": [
-          "TK",
-          "SK",
-          "TRTD"
-        ],
-        "14": [
-          "TW",
-          "MGN"
-        ],
-        "15": [
-          "PA",
-          "PY",
-          "PTD"
-        ],
-        "16": [
-          "SK",
-          "INT",
-          "FR",
-          "TRTD"
-        ],
-        "17": [
-          "TK",
-          "SK",
-          "TRTD"
-        ]
+        "1": ["PC_PA", "PY", "PTD"],
+        "2": ["RA", "RY", "RTD"],
+        "3": ["REC", "REY", "RETD"],
+        "4": ["REC", "REY", "RETD"],
+        "5": ["FGA", "FG", "PAT"],
+        "7": ["PT", "PTAVG", "PTB"],
+        "9": ["TK", "SK", "TRTD"],
+        "10": ["TK", "SK", "TRTD"],
+        "11": ["TK", "SK", "TRTD"],
+        "12": ["TK", "SK", "TRTD"],
+        "13": ["TK", "SK", "TRTD"],
+        "14": ["TW", "MGN"],
+        "15": ["PA", "PY", "PTD"],
+        "16": ["SK", "INT", "FR", "TRTD"],
+        "17": ["TK", "SK", "TRTD"]
       }
     },
     "statsTabPositionalGroups": [
       {
         "displayOrder": 1,
         "name": "Quarterbacks",
-        "positionIds": [
-          1,
-          15
-        ],
+        "positionIds": [1, 15],
         "statCategoryId": 0
       },
       {
         "displayOrder": 2,
         "name": "Backs and Receivers",
-        "positionIds": [
-          2,
-          3,
-          4
-        ],
+        "positionIds": [2, 3, 4],
         "statCategoryId": 0
       },
       {
         "displayOrder": 3,
         "name": "Defensive Players",
-        "positionIds": [
-          9,
-          10,
-          11,
-          12,
-          13,
-          17
-        ],
+        "positionIds": [9, 10, 11, 12, 13, 17],
         "statCategoryId": 1
       },
       {
         "displayOrder": 4,
         "name": "Team D/ST",
-        "positionIds": [
-          16
-        ],
+        "positionIds": [16],
         "statCategoryId": 5
       },
       {
         "displayOrder": 5,
         "name": "Kickers",
-        "positionIds": [
-          5
-        ],
+        "positionIds": [5],
         "statCategoryId": 3
       },
       {
         "displayOrder": 6,
         "name": "Punters",
-        "positionIds": [
-          7
-        ],
+        "positionIds": [7],
         "statCategoryId": 2
       },
       {
         "displayOrder": 7,
         "name": "Coaches",
-        "positionIds": [
-          14
-        ],
+        "positionIds": [14],
         "statCategoryId": 4
       }
     ],
-    "teamPlayerPositionIds": [
-      14,
-      15,
-      16
-    ],
+    "teamPlayerPositionIds": [14, 15, 16],
     "types": {
       "acquisitionTypes": [
         {
@@ -13315,38 +13206,6 @@
           "name": "DRAFT_START"
         }
       ],
-      "draftTypes": [
-        {
-          "display": true,
-          "displayOrder": 0,
-          "id": 0,
-          "name": "OFFLINE"
-        },
-        {
-          "display": true,
-          "displayOrder": 0,
-          "id": 1,
-          "name": "SNAKE"
-        },
-        {
-          "display": true,
-          "displayOrder": 0,
-          "id": 2,
-          "name": "AUTOPICK"
-        },
-        {
-          "display": false,
-          "displayOrder": 0,
-          "id": 3,
-          "name": "SNAIL"
-        },
-        {
-          "display": true,
-          "displayOrder": 0,
-          "id": 4,
-          "name": "AUCTION"
-        }
-      ],
       "executionTypes": [
         {
           "display": true,
@@ -13365,6 +13224,12 @@
           "displayOrder": 0,
           "id": 3,
           "name": "PROCESS"
+        },
+        {
+          "display": true,
+          "displayOrder": 0,
+          "id": 4,
+          "name": "ANALYZE"
         }
       ],
       "injuryStatusTypes": [
@@ -13564,6 +13429,12 @@
           "displayOrder": 0,
           "id": 2,
           "name": "SELECTED_ROUND"
+        },
+        {
+          "display": true,
+          "displayOrder": 0,
+          "id": 3,
+          "name": "MANUAL"
         }
       ],
       "leagueSubTypes": [
@@ -13884,27 +13755,20 @@
         "id": 2
       }
     ],
-    "seasonConfig": 2019
+    "seasonConfig": 2022
   },
   "country": "us",
-  "currentSeason": 2019,
-  "currentSeasonText": "2019",
+  "currentSeason": 2022,
+  "currentSeasonText": "2022",
   "defaultTopScoringPeriodsCount": 2,
+  "eplusLeaguePrize": "$250,000",
   "fantasyGameId": 1,
   "fantasyHomePage": "https://www.espn.com/fantasy",
   "forEveries": [
     {
       "forEvery": true,
       "label": "passing yards",
-      "statAbbrevs": [
-        "PY",
-        "PY5",
-        "PY10",
-        "PY20",
-        "PY25",
-        "PY50",
-        "PY100"
-      ],
+      "statAbbrevs": ["PY", "PY5", "PY10", "PY20", "PY25", "PY50", "PY100"],
       "stats": [
         {
           "abbrev": "PY",
@@ -14036,11 +13900,7 @@
     {
       "forEvery": true,
       "label": "completions",
-      "statAbbrevs": [
-        "PC",
-        "PC5",
-        "PC10"
-      ],
+      "statAbbrevs": ["PC", "PC5", "PC10"],
       "stats": [
         {
           "abbrev": "PC",
@@ -14099,11 +13959,7 @@
     {
       "forEvery": true,
       "label": "incomplete passes",
-      "statAbbrevs": [
-        "INC",
-        "IP5",
-        "IP10"
-      ],
+      "statAbbrevs": ["INC", "IP5", "IP10"],
       "stats": [
         {
           "abbrev": "INC",
@@ -14161,15 +14017,7 @@
     {
       "forEvery": true,
       "label": "rushing yards",
-      "statAbbrevs": [
-        "RY",
-        "RY5",
-        "RY10",
-        "RY20",
-        "RY25",
-        "RY50",
-        "R100"
-      ],
+      "statAbbrevs": ["RY", "RY5", "RY10", "RY20", "RY25", "RY50", "R100"],
       "stats": [
         {
           "abbrev": "RY",
@@ -14301,11 +14149,7 @@
     {
       "forEvery": true,
       "label": "rushing attempts",
-      "statAbbrevs": [
-        "RA",
-        "RA5",
-        "RA10"
-      ],
+      "statAbbrevs": ["RA", "RA5", "RA10"],
       "stats": [
         {
           "abbrev": "RA",
@@ -14504,11 +14348,7 @@
     {
       "forEvery": true,
       "label": "receptions",
-      "statAbbrevs": [
-        "REC",
-        "REC5",
-        "REC10"
-      ],
+      "statAbbrevs": ["REC", "REC5", "REC10"],
       "stats": [
         {
           "abbrev": "REC",
@@ -14571,16 +14411,12 @@
     {
       "forEvery": true,
       "label": "kickoff return yards",
-      "statAbbrevs": [
-        "KR",
-        "KR10",
-        "KR25"
-      ],
+      "statAbbrevs": ["KR", "KR10", "KR25"],
       "stats": [
         {
           "abbrev": "KR",
           "active": true,
-          "apiIdentifier": "kicking.kickoffReturnYards",
+          "apiIdentifier": "returning.kickReturnYards",
           "derived": false,
           "description": "Kickoff Return Yards",
           "display": true,
@@ -14634,16 +14470,12 @@
     {
       "forEvery": true,
       "label": "punt return yards",
-      "statAbbrevs": [
-        "PR",
-        "PR10",
-        "PR25"
-      ],
+      "statAbbrevs": ["PR", "PR10", "PR25"],
       "stats": [
         {
           "abbrev": "PR",
           "active": true,
-          "apiIdentifier": "punting.puntReturnYards",
+          "apiIdentifier": "returning.puntReturnYards",
           "derived": false,
           "description": "Punt Return Yards",
           "display": true,
@@ -14697,10 +14529,7 @@
     {
       "forEvery": true,
       "label": "sacks",
-      "statAbbrevs": [
-        "SK",
-        "HALFSK"
-      ],
+      "statAbbrevs": ["SK", "HALFSK"],
       "stats": [
         {
           "abbrev": "SK",
@@ -14729,7 +14558,6 @@
         {
           "abbrev": "HALFSK",
           "active": true,
-          "apiIdentifier": "defensive.sacksAssisted",
           "derived": false,
           "description": "1/2 Sack",
           "display": true,
@@ -14749,11 +14577,7 @@
     {
       "forEvery": true,
       "label": "total tackles",
-      "statAbbrevs": [
-        "TK",
-        "TK3",
-        "TK5"
-      ],
+      "statAbbrevs": ["TK", "TK3", "TK5"],
       "stats": [
         {
           "abbrev": "TK",
@@ -14820,12 +14644,57 @@
       "color": "#dd0000"
     }
   ],
+  "ibmWatsonEnabled": true,
   "imageBase": "https://g.espncdn.com/lm-static/",
   "isWeeklyGame": true,
   "lang": "en",
   "leagueSettingsStatCategoryOverrides": [
     {
       "description": "Passing",
+      "id": 0,
+      "overridePosition": null,
+      "scorablePositions": [
+        {
+          "abbrev": "QB",
+          "active": true,
+          "display": true,
+          "displayOrder": 1,
+          "id": 1,
+          "name": "Quarterback",
+          "parentId": 0,
+          "statCategoryId": 0
+        },
+        {
+          "abbrev": "RB",
+          "active": true,
+          "display": true,
+          "displayOrder": 2,
+          "id": 2,
+          "name": "Running Back",
+          "parentId": 0,
+          "statCategoryId": 0
+        },
+        {
+          "abbrev": "WR",
+          "active": true,
+          "display": true,
+          "displayOrder": 3,
+          "id": 3,
+          "name": "Wide Receiver",
+          "parentId": 0,
+          "statCategoryId": 0
+        },
+        {
+          "abbrev": "TE",
+          "active": true,
+          "display": true,
+          "displayOrder": 4,
+          "id": 4,
+          "name": "Tight End",
+          "parentId": 0,
+          "statCategoryId": 0
+        }
+      ],
       "statAbbrevs": [
         "PY",
         "PY5",
@@ -14850,7 +14719,6 @@
         "P400",
         "SKD"
       ],
-      "id": 0,
       "stats": [
         {
           "abbrev": "PY",
@@ -15234,6 +15102,50 @@
     },
     {
       "description": "Rushing",
+      "id": 1,
+      "overridePosition": null,
+      "scorablePositions": [
+        {
+          "abbrev": "QB",
+          "active": true,
+          "display": true,
+          "displayOrder": 1,
+          "id": 1,
+          "name": "Quarterback",
+          "parentId": 0,
+          "statCategoryId": 0
+        },
+        {
+          "abbrev": "RB",
+          "active": true,
+          "display": true,
+          "displayOrder": 2,
+          "id": 2,
+          "name": "Running Back",
+          "parentId": 0,
+          "statCategoryId": 0
+        },
+        {
+          "abbrev": "WR",
+          "active": true,
+          "display": true,
+          "displayOrder": 3,
+          "id": 3,
+          "name": "Wide Receiver",
+          "parentId": 0,
+          "statCategoryId": 0
+        },
+        {
+          "abbrev": "TE",
+          "active": true,
+          "display": true,
+          "displayOrder": 4,
+          "id": 4,
+          "name": "Tight End",
+          "parentId": 0,
+          "statCategoryId": 0
+        }
+      ],
       "statAbbrevs": [
         "RY",
         "RY5",
@@ -15252,7 +15164,6 @@
         "RY100",
         "RY200"
       ],
-      "id": 1,
       "stats": [
         {
           "abbrev": "RY",
@@ -15533,6 +15444,50 @@
     },
     {
       "description": "Receiving",
+      "id": 2,
+      "overridePosition": null,
+      "scorablePositions": [
+        {
+          "abbrev": "QB",
+          "active": true,
+          "display": true,
+          "displayOrder": 1,
+          "id": 1,
+          "name": "Quarterback",
+          "parentId": 0,
+          "statCategoryId": 0
+        },
+        {
+          "abbrev": "RB",
+          "active": true,
+          "display": true,
+          "displayOrder": 2,
+          "id": 2,
+          "name": "Running Back",
+          "parentId": 0,
+          "statCategoryId": 0
+        },
+        {
+          "abbrev": "WR",
+          "active": true,
+          "display": true,
+          "displayOrder": 3,
+          "id": 3,
+          "name": "Wide Receiver",
+          "parentId": 0,
+          "statCategoryId": 0
+        },
+        {
+          "abbrev": "TE",
+          "active": true,
+          "display": true,
+          "displayOrder": 4,
+          "id": 4,
+          "name": "Tight End",
+          "parentId": 0,
+          "statCategoryId": 0
+        }
+      ],
       "statAbbrevs": [
         "REY",
         "REY5",
@@ -15552,7 +15507,6 @@
         "REY200",
         "RET"
       ],
-      "id": 2,
       "stats": [
         {
           "abbrev": "REY",
@@ -15854,6 +15808,7 @@
     },
     {
       "description": "Kicking",
+      "id": 3,
       "statAbbrevs": [
         "PAT",
         "PATA",
@@ -15863,15 +15818,17 @@
         "FGM",
         "FG0",
         "FG40",
-        "FG50P",
+        "FG50",
+        "FG60",
         "FGA0",
         "FGA40",
         "FGA50",
+        "FGA60",
         "FGM0",
         "FGM40",
-        "FGM50"
+        "FGM50",
+        "FGM60"
       ],
-      "id": 3,
       "stats": [
         {
           "abbrev": "PAT",
@@ -16023,25 +15980,38 @@
           }
         },
         {
-          "abbrev": "FG50P",
+          "abbrev": "FG50",
           "active": true,
-          "apiIdentifier": "kicking.fieldGoalsMade50",
+          "apiIdentifier": "kicking.fieldGoalsMade50_59",
           "derived": false,
-          "description": "FG Made (50+ yards)",
+          "description": "FG Made (50-59 yards)",
           "display": true,
           "displayAbbrev": "FG50",
-          "displayOrder": 81,
+          "displayOrder": 202,
           "displaySortReversed": false,
           "gamePlayedMarker": false,
-          "id": 74,
+          "id": 198,
           "pointsScoringEligible": true,
           "rotoScoringEligible": false,
           "statCategoryId": 0,
-          "statTypeId": 0,
-          "defaultPoints": {
-            "pointsOverrides": {},
-            "points": 5
-          }
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FG60",
+          "active": true,
+          "apiIdentifier": "kicking.fieldGoalsMade60_99",
+          "derived": false,
+          "description": "FG Made (60+ yards)",
+          "display": true,
+          "displayAbbrev": "FG60",
+          "displayOrder": 203,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 201,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
         },
         {
           "abbrev": "FGA0",
@@ -16079,7 +16049,7 @@
         {
           "abbrev": "FGA50",
           "active": true,
-          "apiIdentifier": "TODO",
+          "apiIdentifier": "kicking.fieldGoalAttempts50_59",
           "derived": false,
           "description": "FG Attempted (50-59 yards)",
           "display": true,
@@ -16088,6 +16058,23 @@
           "displaySortReversed": false,
           "gamePlayedMarker": false,
           "id": 199,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
+        },
+        {
+          "abbrev": "FGA60",
+          "active": true,
+          "apiIdentifier": "kicking.fieldGoalAttempts60_99",
+          "derived": false,
+          "description": "FG Attempted (60+ yards)",
+          "display": true,
+          "displayAbbrev": "FGA60",
+          "displayOrder": 204,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 202,
           "pointsScoringEligible": true,
           "rotoScoringEligible": false,
           "statCategoryId": 0,
@@ -16128,7 +16115,6 @@
         {
           "abbrev": "FGM50",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "FG Missed (50-59 yards)",
           "display": true,
@@ -16141,11 +16127,28 @@
           "rotoScoringEligible": false,
           "statCategoryId": 0,
           "statTypeId": 0
+        },
+        {
+          "abbrev": "FGM60",
+          "active": true,
+          "derived": false,
+          "description": "FG Missed (60+ yards)",
+          "display": true,
+          "displayAbbrev": "FGM60",
+          "displayOrder": 205,
+          "displaySortReversed": false,
+          "gamePlayedMarker": false,
+          "id": 203,
+          "pointsScoringEligible": true,
+          "rotoScoringEligible": false,
+          "statCategoryId": 0,
+          "statTypeId": 0
         }
       ]
     },
     {
       "description": "Team Defense / Special Teams",
+      "id": 4,
       "overridePosition": {
         "abbrev": "D/ST",
         "active": true,
@@ -16203,12 +16206,11 @@
         "2PRET",
         "1PSF"
       ],
-      "id": 4,
       "stats": [
         {
           "abbrev": "KR",
           "active": true,
-          "apiIdentifier": "kicking.kickoffReturnYards",
+          "apiIdentifier": "returning.kickReturnYards",
           "derived": false,
           "description": "Kickoff Return Yards",
           "display": true,
@@ -16257,7 +16259,7 @@
         {
           "abbrev": "PR",
           "active": true,
-          "apiIdentifier": "punting.puntReturnYards",
+          "apiIdentifier": "returning.puntReturnYards",
           "derived": false,
           "description": "Punt Return Yards",
           "display": true,
@@ -16329,7 +16331,6 @@
         {
           "abbrev": "HALFSK",
           "active": true,
-          "apiIdentifier": "defensive.sacksAssisted",
           "derived": false,
           "description": "1/2 Sack",
           "display": true,
@@ -16419,7 +16420,7 @@
         {
           "abbrev": "FRTD",
           "active": true,
-          "apiIdentifier": "general.fumblesTouchdowns",
+          "apiIdentifier": "general.defensiveFumblesTouchdowns",
           "derived": false,
           "description": "Fumble Return TD",
           "display": true,
@@ -16443,7 +16444,7 @@
         {
           "abbrev": "KRTD",
           "active": true,
-          "apiIdentifier": "kicking.kickoffReturnTouchdowns",
+          "apiIdentifier": "returning.kickReturnTouchdowns",
           "derived": false,
           "description": "Kickoff Return TD",
           "display": true,
@@ -16513,6 +16514,7 @@
         {
           "abbrev": "BLKK",
           "active": true,
+          "apiIdentifier": "defensive.kicksBlocked",
           "derived": false,
           "description": "Blocked Punt, PAT or FG",
           "display": true,
@@ -16558,7 +16560,7 @@
         {
           "abbrev": "FR",
           "active": true,
-          "apiIdentifier": "general.fumblesRecovered",
+          "apiIdentifier": "returning.oppFumbleRecoveries",
           "derived": false,
           "description": "Each Fumble Recovered",
           "display": true,
@@ -17065,7 +17067,6 @@
         {
           "abbrev": "2PRET",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "2pt Return",
           "display": true,
@@ -17112,6 +17113,7 @@
     },
     {
       "description": "Miscellaneous",
+      "id": 5,
       "statAbbrevs": [
         "KR",
         "KR10",
@@ -17132,12 +17134,11 @@
         "2PRET",
         "1PSF"
       ],
-      "id": 5,
       "stats": [
         {
           "abbrev": "KR",
           "active": true,
-          "apiIdentifier": "kicking.kickoffReturnYards",
+          "apiIdentifier": "returning.kickReturnYards",
           "derived": false,
           "description": "Kickoff Return Yards",
           "display": true,
@@ -17186,7 +17187,7 @@
         {
           "abbrev": "PR",
           "active": true,
-          "apiIdentifier": "punting.puntReturnYards",
+          "apiIdentifier": "returning.puntReturnYards",
           "derived": false,
           "description": "Punt Return Yards",
           "display": true,
@@ -17235,7 +17236,7 @@
         {
           "abbrev": "KRTD",
           "active": true,
-          "apiIdentifier": "kicking.kickoffReturnTouchdowns",
+          "apiIdentifier": "returning.kickReturnTouchdowns",
           "derived": false,
           "description": "Kickoff Return TD",
           "display": true,
@@ -17283,7 +17284,7 @@
         {
           "abbrev": "FTD",
           "active": true,
-          "apiIdentifier": "general.fumblesTouchdowns",
+          "apiIdentifier": "general.offensiveFumblesTouchdowns",
           "derived": false,
           "description": "Fumble Recovered for TD",
           "display": true,
@@ -17398,7 +17399,7 @@
         {
           "abbrev": "FRTD",
           "active": true,
-          "apiIdentifier": "general.fumblesTouchdowns",
+          "apiIdentifier": "general.defensiveFumblesTouchdowns",
           "derived": false,
           "description": "Fumble Return TD",
           "display": true,
@@ -17444,7 +17445,6 @@
         {
           "abbrev": "2PRET",
           "active": true,
-          "apiIdentifier": "TODO",
           "derived": false,
           "description": "2pt Return",
           "display": true,
@@ -17491,6 +17491,7 @@
     },
     {
       "description": "Defensive Players",
+      "id": 6,
       "statAbbrevs": [
         "SK",
         "HALFSK",
@@ -17507,7 +17508,6 @@
         "STF",
         "PD"
       ],
-      "id": 6,
       "stats": [
         {
           "abbrev": "SK",
@@ -17535,7 +17535,6 @@
         {
           "abbrev": "HALFSK",
           "active": true,
-          "apiIdentifier": "defensive.sacksAssisted",
           "derived": false,
           "description": "1/2 Sack",
           "display": true,
@@ -17601,6 +17600,7 @@
         {
           "abbrev": "BLKK",
           "active": true,
+          "apiIdentifier": "defensive.kicksBlocked",
           "derived": false,
           "description": "Blocked Punt, PAT or FG",
           "display": true,
@@ -17646,7 +17646,7 @@
         {
           "abbrev": "FR",
           "active": true,
-          "apiIdentifier": "general.fumblesRecovered",
+          "apiIdentifier": "returning.oppFumbleRecoveries",
           "derived": false,
           "description": "Each Fumble Recovered",
           "display": true,
@@ -17778,6 +17778,7 @@
     },
     {
       "description": "Head Coach",
+      "id": 7,
       "overridePosition": {
         "abbrev": "HC",
         "active": true,
@@ -17806,7 +17807,6 @@
         "LM20",
         "LM25"
       ],
-      "id": 7,
       "stats": [
         {
           "abbrev": "TW",
@@ -18069,6 +18069,7 @@
     },
     {
       "description": "Punting",
+      "id": 8,
       "statAbbrevs": [
         "PT",
         "PTY",
@@ -18087,7 +18088,6 @@
         "PTA34",
         "PTA33"
       ],
-      "id": 8,
       "stats": [
         {
           "abbrev": "PT",
@@ -18365,9 +18365,7 @@
       "canApplyLimitIndividually": false,
       "display": true,
       "displayOrder": 1,
-      "eligiblePositions": [
-        1
-      ],
+      "eligiblePositions": [1],
       "id": 0,
       "injuryRequired": false,
       "lineupSlotEligible": true,
@@ -18382,9 +18380,7 @@
       "canApplyLimitIndividually": false,
       "display": true,
       "displayOrder": 5,
-      "eligiblePositions": [
-        3
-      ],
+      "eligiblePositions": [3],
       "id": 4,
       "injuryRequired": false,
       "lineupSlotEligible": true,
@@ -18399,9 +18395,7 @@
       "canApplyLimitIndividually": false,
       "display": true,
       "displayOrder": 3,
-      "eligiblePositions": [
-        2
-      ],
+      "eligiblePositions": [2],
       "id": 2,
       "injuryRequired": false,
       "lineupSlotEligible": true,
@@ -18441,7 +18435,7 @@
       "starter": false
     }
   ],
-  "maxWatchListPlayers": 30,
+  "maxWatchListPlayers": 50,
   "modalTSNEnabled": true,
   "mutuallyExclusiveSlots": {
     "QB": "TQB",
@@ -18454,16 +18448,101 @@
     "minutesPerPeriod": 15,
     "periods": 4
   },
-  "proSeasonLength": 16,
+  "proSport": "football",
+  "rankingSlots": [
+    {
+      "abbrev": "QB",
+      "active": true,
+      "bench": false,
+      "canApplyLimitIndividually": false,
+      "display": true,
+      "displayOrder": 1,
+      "eligiblePositions": [1],
+      "id": 0,
+      "injuryRequired": false,
+      "lineupSlotEligible": true,
+      "name": "Quarterback",
+      "parentId": 7,
+      "starter": true
+    },
+    {
+      "abbrev": "RB",
+      "active": true,
+      "bench": false,
+      "canApplyLimitIndividually": false,
+      "display": true,
+      "displayOrder": 3,
+      "eligiblePositions": [2],
+      "id": 2,
+      "injuryRequired": false,
+      "lineupSlotEligible": true,
+      "name": "Running Back",
+      "parentId": 3,
+      "starter": true
+    },
+    {
+      "abbrev": "WR",
+      "active": true,
+      "bench": false,
+      "canApplyLimitIndividually": false,
+      "display": true,
+      "displayOrder": 5,
+      "eligiblePositions": [3],
+      "id": 4,
+      "injuryRequired": false,
+      "lineupSlotEligible": true,
+      "name": "Wide Receiver",
+      "parentId": 5,
+      "starter": true
+    },
+    {
+      "abbrev": "TE",
+      "active": true,
+      "bench": false,
+      "canApplyLimitIndividually": false,
+      "display": true,
+      "displayOrder": 7,
+      "eligiblePositions": [4],
+      "id": 6,
+      "injuryRequired": false,
+      "lineupSlotEligible": true,
+      "name": "Tight End",
+      "parentId": 5,
+      "starter": true
+    },
+    {
+      "abbrev": "K",
+      "active": true,
+      "bench": false,
+      "canApplyLimitIndividually": false,
+      "display": true,
+      "displayOrder": 20,
+      "eligiblePositions": [5],
+      "id": 17,
+      "injuryRequired": false,
+      "lineupSlotEligible": true,
+      "name": "Place Kicker",
+      "parentId": 7,
+      "starter": true
+    },
+    {
+      "abbrev": "D/ST",
+      "active": true,
+      "bench": false,
+      "canApplyLimitIndividually": false,
+      "display": true,
+      "displayOrder": 19,
+      "eligiblePositions": [16],
+      "id": 16,
+      "injuryRequired": false,
+      "lineupSlotEligible": true,
+      "name": "Team Defense/Special Teams",
+      "parentId": 25,
+      "starter": true
+    }
+  ],
   "settingsTableOrder": {
-    "ROTO": [
-      "basic",
-      "draft",
-      "rosters",
-      "scoring",
-      "teams",
-      "transactions"
-    ],
+    "ROTO": ["basic", "draft", "rosters", "scoring", "teams", "transactions"],
     "H2H_POINTS": [
       "basic",
       "draft",
@@ -18500,14 +18579,12 @@
       "transactions"
     ]
   },
+  "showTotalBenchRow": true,
   "sport": "Football",
   "sportFAQLinkId": "360000094171",
   "sportLockTimeArticleId": "360000065491",
-  "statSplitOptions": [
-    "currSeason",
-    "lastSeason",
-    "projections"
-  ],
+  "standardPositions": ["QB", "RB", "WR", "TE", "K", "D/ST"],
+  "statSplitOptions": ["currSeason", "lastSeason", "projections"],
   "tabsViews": [
     "overview",
     "stats",
@@ -18520,13 +18597,15 @@
   "theme": {
     "background": "#0a210d",
     "highlight": "#1f712b",
-    "primary": "#39b54a",
+    "light": "#41ba42",
+    "primary": "#0d830f",
     "secondary": "#124218"
   },
   "uri_legacy": "ffl",
   "uri_nextgen_api": "ffl",
   "uri_nextgen_ui": "football",
   "uri_site_api": "ffl",
-  "useStatTieBreakers": false,
-  "useMatchupPreview": true
+  "useMatchupPreview": true,
+  "useMobileLegacyBg": true,
+  "useStatTieBreakers": false
 }
