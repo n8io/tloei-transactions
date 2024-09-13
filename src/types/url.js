@@ -10,16 +10,16 @@ const hydrate = (rawUrl, { leagueId, seasonId, weekId } = {}) =>
 
 const Url = {
   API_LEAGUE_SETTINGS:
-    'https://fantasy.espn.com/apis/v3/games/ffl/seasons/{{seasonId}}/segments/0/leagues/{{leagueId}}',
+    'https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/{{seasonId}}/segments/0/leagues/{{leagueId}}',
   API_PLAYERS:
-    'https://fantasy.espn.com/apis/v3/games/ffl/seasons/{{seasonId}}/players?scoringPeriodId={{weekId}}',
+    'https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/{{seasonId}}/players?scoringPeriodId={{weekId}}',
   API_SCORE_ADJUSTMENT:
-    'https://fantasy.espn.com/apis/v3/games/ffl/seasons/{{seasonId}}/segments/0/leagues/{{leagueId}}/schedule',
+    'https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/{{seasonId}}/segments/0/leagues/{{leagueId}}/schedule',
   LOGIN: 'http://www.espn.com/login',
   SCOREBOARD:
-    'https://fantasy.espn.com/football/league/scoreboard?leagueId={{leagueId}}&matchupPeriodId={{weekId}}',
+    'https://lm-api-reads.fantasy.espn.com/football/league/scoreboard?leagueId={{leagueId}}&matchupPeriodId={{weekId}}',
   SETTINGS:
-    'https://fantasy.espn.com/football/league/settings?leagueId={{leagueId}}&seasonId={{seasonId}}',
+    'https://lm-api-reads.fantasy.espn.com/football/league/settings?leagueId={{leagueId}}&seasonId={{seasonId}}',
 };
 
 export { Url, hydrate };
